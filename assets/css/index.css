@@ -5,6 +5,11 @@
 }
 
 @font-face {
+    font-family: Rubik;
+    src: url(~/assets/fonts/Rubik/RubikOne-Regular.ttf);
+}
+
+@font-face {
     font-family: DB-Heavent-Med;
     src: url(~/assets/fonts/DB-Heavent/DB-Heavent-Med.ttf);
 }
@@ -227,6 +232,9 @@
     font-family: SF-TH, SF-Pro
 }
 
+.Rubik {
+    font-family: Rubik
+}
 
 /* local css  */
 
