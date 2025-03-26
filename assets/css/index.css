@@ -1,0 +1,310 @@
+
+@font-face {
+    font-family: DB-Heavent;
+    src: url(~/assets/fonts/DB-Heavent/DB-Heavent.ttf);
+}
+
+@font-face {
+    font-family: DB-Heavent-Med;
+    src: url(~/assets/fonts/DB-Heavent/DB-Heavent-Med.ttf);
+}
+
+@font-face {
+    font-family: Fredoka;
+    src: url(~/assets/fonts/Fredoka/Fredoka-VariableFont_wdth,wght.ttf);
+}
+
+
+@font-face {
+    font-family: DB-Heavent-Bold;
+    src: url(~/assets/fonts/DB-Heavent/DB-Heavent-Bold.ttf);
+}
+
+@font-face {
+    font-family: Inter-Black;
+    src: url(~/assets/fonts/Inter/Inter-Black.ttf);
+}
+
+@font-face {
+    font-family: Inter-Bold;
+    src: url(~/assets/fonts/Inter/Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family: Athiti-Bold;
+    src: url(~/assets/fonts/Athiti/Athiti-Bold.ttf);
+}
+
+@font-face {
+    font-family: Inter-ExtraBold;
+    src: url(~/assets/fonts/Inter/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Inter-ExtraLight;
+    src: url(~/assets/fonts/Inter/Inter-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: Athiti-ExtraLight;
+    src: url(~/assets/fonts/Athiti/Athiti-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: Inter-Light;
+    src: url(~/assets/fonts/Inter/Inter-Light.ttf);
+}
+
+@font-face {
+    font-family: Athiti-Light;
+    src: url(~/assets/fonts/Athiti/Athiti-Light.ttf);
+}
+
+@font-face {
+    font-family: Inter-Medium;
+    src: url(~/assets/fonts/Inter/Inter-Medium.ttf);
+}
+
+@font-face {
+    font-family: Athiti-Medium;
+    src: url(~/assets/fonts/Athiti/Athiti-Medium.ttf);
+}
+
+@font-face {
+    font-family: Inter-Regular;
+    src: url(~/assets/fonts/Inter/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: Athiti-Regular;
+    src: url(~/assets/fonts/Athiti/Athiti-Regular.ttf);
+}
+
+@font-face {
+    font-family: Inter-SemiBold;
+    src: url(~/assets/fonts/Inter/Inter-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Athiti-SemiBold;
+    src: url(~/assets/fonts/Athiti/Athiti-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Inter-Thin;
+    src: url(~/assets/fonts/Inter/Inter-Thin.ttf);
+}
+
+
+@font-face {
+    font-family: SF-Pro;
+    src: url(~/assets/fonts/SF-Pro/SF-Pro.ttf);
+}
+
+@font-face {
+    font-family: SF-Semi;
+    src: url(~/assets/fonts/SF-Pro/SFProText-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: SF-Med;
+    src: url(~/assets/fonts/SF-Pro/SFProText-Medium.ttf);
+}
+
+
+@font-face {
+    font-family: SF-Light;
+    src: url(~/assets/fonts/SF-Pro/SFProText-Light.ttf);
+}
+@font-face {
+    font-family: SF-Heavy;
+    src: url(~/assets/fonts/SF-Pro/SFProText-Heavy.ttf);
+}
+@font-face {
+    font-family: SF-Bold;
+    src: url(~/assets/fonts/SF-Pro/SFProText-Bold.ttf);
+}
+
+@font-face {
+    font-family: SF-TH-Semi;
+    src: url(~/assets/fonts/SF-Pro/SF-TH-Semi.ttf);
+}
+
+@font-face {
+    font-family: SF-TH;
+    src: url(~/assets/fonts/SF-Pro/SFProTH.woff2);
+}
+
+@font-face {
+    font-family: DB-Mon;
+    src: url(~/assets/fonts/DB-Heavent/DB-HelvethaicaMon.ttf);
+}
+
+.Inter-Black {
+    font-family: Inter-Black
+}
+
+.Inter-Bold {
+    font-family: Inter-Bold, Athiti-Bold
+}
+
+.Inter-ExtraBold {
+    font-family: Inter-ExtraBold
+}
+
+.Inter-ExtraLight {
+    font-family: Inter-ExtraLight, Athiti-ExtraLight
+}
+
+.Inter-Light {
+    font-family: Inter-Light, Athiti-Light
+}
+
+.Inter-Medium {
+    font-family: Inter-Medium, Athiti-Medium
+}
+
+.Inter-Regular {
+    font-family: Inter-Regular, Athiti-Regular
+}
+
+.Inter-SemiBold {
+    font-family: Inter-SemiBold, Athiti-SemiBold
+}
+
+.Inter-Thin {
+    font-family: Inter-Thin
+}
+
+.DB-Heavent {
+    font-family: DB-Heavent
+}
+
+.DB-Heavent-Med {
+    font-family: DB-Heavent-Med
+}
+
+.DB-Heavent-Bold {
+    font-family: DB-Heavent-Bold
+}
+
+.DB-mon {
+    font-family: DB-Mon;
+}
+
+.Fredoka {
+    font-family: Fredoka
+}
+
+.SF-Pro {
+    font-family: SF-Pro
+}
+
+.SF-Semi {
+    font-family: SF-Semi
+}
+
+.SF-Med{
+    font-family: SF-Med
+}
+
+.SF-Light{
+    font-family: SF-Light
+}
+.SF-Heavy{
+    font-family: SF-Heavy
+}
+.SF-Bold {
+    font-family: SF-Bold
+
+}
+
+.SF-TH-Semi {
+    font-family: SF-TH-Semi , SF-Semi
+}
+
+.SF-TH {
+    font-family: SF-TH, SF-Pro
+}
+
+
+/* local css  */
+
+.bg-nav{
+    @apply bg-[linear-gradient(180deg,rgba(32,45,65,1)_0%,rgba(43,66,101,0.06206232492997199)_100%)];
+
+}
+
+.header {
+    @apply text-[1rem] text-[#FF7A00];
+}
+
+.th-header {
+    @apply  SF-TH-Semi text-[#2B2B2B] text-[1.5rem];
+}
+
+.button-orange {
+    @apply bg-[#FF7A00] hover:bg-[#e06600] rounded-full text-center text-white;
+}
+
+.image-type {
+    @apply h-auto object-cover;
+}
+
+.image-full{
+    @apply w-full h-auto;
+}
+
+.image-full-re{
+    @apply w-full h-auto relative;
+}
+
+.image-full-ab{
+    @apply w-full h-auto absolute object-cover;
+}
+
+.image-ab {
+    @apply absolute  h-auto object-cover;
+}
+
+.f-row{
+    @apply flex flex-row;
+}
+.f-col{
+    @apply flex flex-col;
+}
+.i-center {
+    @apply flex items-center;
+}
+
+.j-center {
+    @apply flex justify-center;
+}
+.g-center{
+    @apply grid justify-center;
+}
+
+.col-center {
+    @apply flex flex-col items-center justify-center;
+}
+
+.f-center{
+    @apply flex items-center justify-center;
+}
+
+.f-re {
+    @apply flex relative;
+}
+
+.f-ab {
+    @apply flex absolute;
+}
+
+.content-w-re{
+    @apply w-full h-auto relative;
+}
+.content-re{
+    @apply flex relative h-auto
+}
+
+
