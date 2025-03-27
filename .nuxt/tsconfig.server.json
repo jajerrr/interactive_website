@@ -55,20 +55,11 @@
       "@nuxt/devtools": [
         "../node_modules/@nuxt/devtools"
       ],
-      "vue": [
-        "../node_modules/vue"
-      ],
       "@vue/runtime-core": [
         "../node_modules/@vue/runtime-core"
       ],
       "@vue/compiler-sfc": [
         "../node_modules/@vue/compiler-sfc"
-      ],
-      "vue-router": [
-        "../node_modules/vue-router"
-      ],
-      "vue-router/auto-routes": [
-        "../node_modules/vue-router/vue-router-auto-routes"
       ],
       "unplugin-vue-router/client": [
         "../node_modules/unplugin-vue-router/client"
@@ -79,17 +70,20 @@
       "nuxt": [
         "../node_modules/nuxt"
       ],
-      "vite/client": [
-        "../node_modules/vite/client"
-      ],
       "#shared": [
         "../shared"
       ],
       "assets": [
         "../assets"
       ],
+      "assets/*": [
+        "../assets/*"
+      ],
       "public": [
         "../public"
+      ],
+      "public/*": [
+        "../public/*"
       ],
       "#build": [
         "./"
@@ -100,8 +94,17 @@
       "#internal/nuxt/paths": [
         "../node_modules/nuxt/dist/core/runtime/nitro/utils/paths"
       ],
+      "pinia": [
+        "../node_modules/pinia/dist/pinia"
+      ],
+      "#gsap": [
+        "./gsapComposables"
+      ],
       "#unhead/composables": [
         "../node_modules/nuxt/dist/head/runtime/composables/v3"
+      ],
+      "#nuxt-icon-server-bundle": [
+        "./nuxt-icon-server-bundle"
       ]
     },
     "lib": [
@@ -112,6 +115,14 @@
   },
   "include": [
     "./types/nitro-nuxt.d.ts",
+    "../node_modules/@nuxtjs/tailwindcss/runtime/server",
+    "../node_modules/@vueuse/nuxt/runtime/server",
+    "../node_modules/@pinia/nuxt/runtime/server",
+    "../node_modules/@pinia-plugin-persistedstate/nuxt/runtime/server",
+    "../node_modules/@nuxt/icon/runtime/server",
+    "../node_modules/vue3-carousel-nuxt/runtime/server",
+    "../node_modules/nuxt-swiper/runtime/server",
+    "../node_modules/@hypernym/nuxt-gsap/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",
@@ -121,6 +132,14 @@
   "exclude": [
     "../node_modules",
     "../node_modules/nuxt/node_modules",
+    "../node_modules/@nuxtjs/tailwindcss/node_modules",
+    "../node_modules/@vueuse/nuxt/node_modules",
+    "../node_modules/@pinia/nuxt/node_modules",
+    "../node_modules/@pinia-plugin-persistedstate/nuxt/node_modules",
+    "../node_modules/@nuxt/icon/node_modules",
+    "../node_modules/vue3-carousel-nuxt/node_modules",
+    "../node_modules/nuxt-swiper/node_modules",
+    "../node_modules/@hypernym/nuxt-gsap/node_modules",
     "../node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
     "../dist"

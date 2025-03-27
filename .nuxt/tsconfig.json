@@ -29,20 +29,11 @@
       "@nuxt/devtools": [
         "../node_modules/@nuxt/devtools"
       ],
-      "vue": [
-        "../node_modules/vue"
-      ],
       "@vue/runtime-core": [
         "../node_modules/@vue/runtime-core"
       ],
       "@vue/compiler-sfc": [
         "../node_modules/@vue/compiler-sfc"
-      ],
-      "vue-router": [
-        "../node_modules/vue-router"
-      ],
-      "vue-router/auto-routes": [
-        "../node_modules/vue-router/vue-router-auto-routes"
       ],
       "unplugin-vue-router/client": [
         "../node_modules/unplugin-vue-router/client"
@@ -52,9 +43,6 @@
       ],
       "nuxt": [
         "../node_modules/nuxt"
-      ],
-      "vite/client": [
-        "../node_modules/vite/client"
       ],
       "~": [
         ".."
@@ -86,8 +74,14 @@
       "assets": [
         "../assets"
       ],
+      "assets/*": [
+        "../assets/*"
+      ],
       "public": [
         "../public"
+      ],
+      "public/*": [
+        "../public/*"
       ],
       "#app": [
         "../node_modules/nuxt/dist/app"
@@ -97,6 +91,12 @@
       ],
       "vue-demi": [
         "../node_modules/nuxt/dist/app/compat/vue-demi"
+      ],
+      "pinia": [
+        "../node_modules/pinia/dist/pinia"
+      ],
+      "#gsap": [
+        "./gsapComposables"
       ],
       "#vue-router": [
         "../node_modules/vue-router"
@@ -142,7 +142,9 @@
     ],
     "jsx": "preserve",
     "jsxImportSource": "vue",
-    "types": [],
+    "types": [
+      "swiper/vue"
+    ],
     "moduleResolution": "Bundler",
     "useDefineForClassFields": true,
     "noImplicitThis": true,
@@ -152,6 +154,22 @@
     "./nuxt.d.ts",
     "../.config/nuxt.*",
     "../**/*",
+    "../node_modules/@nuxtjs/tailwindcss/runtime",
+    "../node_modules/@nuxtjs/tailwindcss/dist/runtime",
+    "../node_modules/@vueuse/nuxt/runtime",
+    "../node_modules/@vueuse/nuxt/dist/runtime",
+    "../node_modules/@pinia/nuxt/runtime",
+    "../node_modules/@pinia/nuxt/dist/runtime",
+    "../node_modules/@pinia-plugin-persistedstate/nuxt/runtime",
+    "../node_modules/@pinia-plugin-persistedstate/nuxt/dist/runtime",
+    "../node_modules/@nuxt/icon/runtime",
+    "../node_modules/@nuxt/icon/dist/runtime",
+    "../node_modules/vue3-carousel-nuxt/runtime",
+    "../node_modules/vue3-carousel-nuxt/dist/runtime",
+    "../node_modules/nuxt-swiper/runtime",
+    "../node_modules/nuxt-swiper/dist/runtime",
+    "../node_modules/@hypernym/nuxt-gsap/runtime",
+    "../node_modules/@hypernym/nuxt-gsap/dist/runtime",
     "../node_modules/@nuxt/devtools/runtime",
     "../node_modules/@nuxt/devtools/dist/runtime",
     "../node_modules/@nuxt/telemetry/runtime",
@@ -162,8 +180,32 @@
     "../dist",
     "../node_modules",
     "../node_modules/nuxt/node_modules",
+    "../node_modules/@nuxtjs/tailwindcss/node_modules",
+    "../node_modules/@vueuse/nuxt/node_modules",
+    "../node_modules/@pinia/nuxt/node_modules",
+    "../node_modules/@pinia-plugin-persistedstate/nuxt/node_modules",
+    "../node_modules/@nuxt/icon/node_modules",
+    "../node_modules/vue3-carousel-nuxt/node_modules",
+    "../node_modules/nuxt-swiper/node_modules",
+    "../node_modules/@hypernym/nuxt-gsap/node_modules",
     "../node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
+    "../node_modules/@nuxtjs/tailwindcss/runtime/server",
+    "../node_modules/@nuxtjs/tailwindcss/dist/runtime/server",
+    "../node_modules/@vueuse/nuxt/runtime/server",
+    "../node_modules/@vueuse/nuxt/dist/runtime/server",
+    "../node_modules/@pinia/nuxt/runtime/server",
+    "../node_modules/@pinia/nuxt/dist/runtime/server",
+    "../node_modules/@pinia-plugin-persistedstate/nuxt/runtime/server",
+    "../node_modules/@pinia-plugin-persistedstate/nuxt/dist/runtime/server",
+    "../node_modules/@nuxt/icon/runtime/server",
+    "../node_modules/@nuxt/icon/dist/runtime/server",
+    "../node_modules/vue3-carousel-nuxt/runtime/server",
+    "../node_modules/vue3-carousel-nuxt/dist/runtime/server",
+    "../node_modules/nuxt-swiper/runtime/server",
+    "../node_modules/nuxt-swiper/dist/runtime/server",
+    "../node_modules/@hypernym/nuxt-gsap/runtime/server",
+    "../node_modules/@hypernym/nuxt-gsap/dist/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/devtools/dist/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",

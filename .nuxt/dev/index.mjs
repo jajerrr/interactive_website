@@ -3,7 +3,7 @@ import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, createError, getRouterParam, readBody, getQuery as getQuery$1, getResponseStatusText } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, getQuery as getQuery$1, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, readBody, getResponseStatusText } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/h3/dist/index.mjs';
 import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import destr from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/destr/dist/index.mjs';
 import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/ufo/dist/index.mjs';
@@ -21,7 +21,7 @@ import { createFetch, Headers as Headers$1 } from 'file://C:/Users/User/Document
 import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/node-mock-http/dist/index.mjs';
 import { createStorage, prefixStorage } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/unstorage/dist/index.mjs';
 import unstorage_47drivers_47fs from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/ohash/dist/index.mjs';
+import { digest, hash as hash$1 } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/ohash/dist/index.mjs';
 import { toRouteMatcher, createRouter } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
 import consola, { consola as consola$1 } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/consola/dist/index.mjs';
@@ -31,6 +31,9 @@ import { SourceMapConsumer } from 'file://C:/Users/User/Documents/GitHub/interac
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { getContext } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/unctx/dist/index.mjs';
 import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/errx/dist/index.js';
+import { basename } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/pathe/dist/index.mjs';
+import { getIcons } from 'file://C:/Users/User/Documents/GitHub/interactive_website/node_modules/@iconify/utils/lib/index.mjs';
+import { collections } from 'file://C:/Users/User/Documents/GitHub/interactive_website/.nuxt/nuxt-icon-server-bundle.mjs';
 
 const serverAssets = [{"baseName":"server","dir":"C:/Users/User/Documents/GitHub/interactive_website/server/assets"}];
 
@@ -573,7 +576,201 @@ function cloneWithProxy(obj, overrides) {
 const cachedEventHandler = defineCachedEventHandler;
 
 const inlineAppConfig = {
-  "nuxt": {}
+  "nuxt": {},
+  "icon": {
+    "provider": "server",
+    "class": "",
+    "aliases": {},
+    "iconifyApiEndpoint": "https://api.iconify.design",
+    "localApiEndpoint": "/api/_nuxt_icon",
+    "fallbackToApi": true,
+    "cssSelectorPrefix": "i-",
+    "cssWherePseudo": true,
+    "mode": "css",
+    "attrs": {
+      "aria-hidden": true
+    },
+    "collections": [
+      "academicons",
+      "akar-icons",
+      "ant-design",
+      "arcticons",
+      "basil",
+      "bi",
+      "bitcoin-icons",
+      "bpmn",
+      "brandico",
+      "bx",
+      "bxl",
+      "bxs",
+      "bytesize",
+      "carbon",
+      "catppuccin",
+      "cbi",
+      "charm",
+      "ci",
+      "cib",
+      "cif",
+      "cil",
+      "circle-flags",
+      "circum",
+      "clarity",
+      "codicon",
+      "covid",
+      "cryptocurrency",
+      "cryptocurrency-color",
+      "dashicons",
+      "devicon",
+      "devicon-plain",
+      "ei",
+      "el",
+      "emojione",
+      "emojione-monotone",
+      "emojione-v1",
+      "entypo",
+      "entypo-social",
+      "eos-icons",
+      "ep",
+      "et",
+      "eva",
+      "f7",
+      "fa",
+      "fa-brands",
+      "fa-regular",
+      "fa-solid",
+      "fa6-brands",
+      "fa6-regular",
+      "fa6-solid",
+      "fad",
+      "fe",
+      "feather",
+      "file-icons",
+      "flag",
+      "flagpack",
+      "flat-color-icons",
+      "flat-ui",
+      "flowbite",
+      "fluent",
+      "fluent-emoji",
+      "fluent-emoji-flat",
+      "fluent-emoji-high-contrast",
+      "fluent-mdl2",
+      "fontelico",
+      "fontisto",
+      "formkit",
+      "foundation",
+      "fxemoji",
+      "gala",
+      "game-icons",
+      "geo",
+      "gg",
+      "gis",
+      "gravity-ui",
+      "gridicons",
+      "grommet-icons",
+      "guidance",
+      "healthicons",
+      "heroicons",
+      "heroicons-outline",
+      "heroicons-solid",
+      "hugeicons",
+      "humbleicons",
+      "ic",
+      "icomoon-free",
+      "icon-park",
+      "icon-park-outline",
+      "icon-park-solid",
+      "icon-park-twotone",
+      "iconamoon",
+      "iconoir",
+      "icons8",
+      "il",
+      "ion",
+      "iwwa",
+      "jam",
+      "la",
+      "lets-icons",
+      "line-md",
+      "logos",
+      "ls",
+      "lucide",
+      "lucide-lab",
+      "mage",
+      "majesticons",
+      "maki",
+      "map",
+      "marketeq",
+      "material-symbols",
+      "material-symbols-light",
+      "mdi",
+      "mdi-light",
+      "medical-icon",
+      "memory",
+      "meteocons",
+      "mi",
+      "mingcute",
+      "mono-icons",
+      "mynaui",
+      "nimbus",
+      "nonicons",
+      "noto",
+      "noto-v1",
+      "octicon",
+      "oi",
+      "ooui",
+      "openmoji",
+      "oui",
+      "pajamas",
+      "pepicons",
+      "pepicons-pencil",
+      "pepicons-pop",
+      "pepicons-print",
+      "ph",
+      "pixelarticons",
+      "prime",
+      "ps",
+      "quill",
+      "radix-icons",
+      "raphael",
+      "ri",
+      "rivet-icons",
+      "si-glyph",
+      "simple-icons",
+      "simple-line-icons",
+      "skill-icons",
+      "solar",
+      "streamline",
+      "streamline-emojis",
+      "subway",
+      "svg-spinners",
+      "system-uicons",
+      "tabler",
+      "tdesign",
+      "teenyicons",
+      "token",
+      "token-branded",
+      "topcoat",
+      "twemoji",
+      "typcn",
+      "uil",
+      "uim",
+      "uis",
+      "uit",
+      "uiw",
+      "unjs",
+      "vaadin",
+      "vs",
+      "vscode-icons",
+      "websymbol",
+      "weui",
+      "whh",
+      "wi",
+      "wpf",
+      "zmdi",
+      "zondicons"
+    ],
+    "fetchTimeout": 1500
+  }
 };
 
 
@@ -643,7 +840,18 @@ const _inlineRuntimeConfig = {
       }
     }
   },
-  "public": {}
+  "public": {
+    "persistedState": {
+      "storage": "localStorage",
+      "debug": false,
+      "cookieOptions": {
+        "sameSite": "strict"
+      }
+    }
+  },
+  "icon": {
+    "serverKnownCssClasses": []
+  }
 };
 const envOptions = {
   prefix: "NITRO_",
@@ -665,7 +873,12 @@ function useRuntimeConfig(event) {
   event.context.nitro.runtimeConfig = runtimeConfig;
   return runtimeConfig;
 }
-_deepFreeze(klona(appConfig));
+const _sharedAppConfig = _deepFreeze(klona(appConfig));
+function useAppConfig(event) {
+  {
+    return _sharedAppConfig;
+  }
+}
 function _deepFreeze(object) {
   const propNames = Object.getOwnPropertyNames(object);
   for (const name of propNames) {
@@ -1010,7 +1223,7 @@ const _Yb5W3ZgCypgIT_xZoNud9wD_Bni2uwI4cc3T22qoyc = (function(nitro) {
 
 const rootDir = "C:/Users/User/Documents/GitHub/interactive_website";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"http-equiv":"Content-Type"}],"link":[{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"}],"style":[],"script":[{"src":"https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.4.0/socket.io.js","integrity":"sha512-Y8KodDCDqst1e8z0EGKiqEQq3T8NszmgW2HvsC6+tlNw7kxYxHTLl5Iw/gqZj/6qhZdBt+jYyOsybgSAiB9OOA==","crossorigin":"anonymous","referrerpolicy":"no-referrer"},{"src":"https://scripts.sirv.com/sirvjs/v3/sirv.js"},{"src":"https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js","type":"module"},{"src":"https://cdn.socket.io/4.8.1/socket.io.min.js","integrity":"sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+","crossorigin":"anonymous"}],"noscript":[]};
 
 const appRootTag = "div";
 
@@ -1101,10 +1314,159 @@ const plugins = [
 _QTwPVqNWiANrC2ni0Pe1N8R4TD6Wieer0_I9I2zPBC0
 ];
 
+function defineRenderHandler(render) {
+  const runtimeConfig = useRuntimeConfig();
+  return eventHandler(async (event) => {
+    const nitroApp = useNitroApp();
+    const ctx = { event, render, response: void 0 };
+    await nitroApp.hooks.callHook("render:before", ctx);
+    if (!ctx.response) {
+      if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
+        setResponseHeader(event, "Content-Type", "image/x-icon");
+        return send(
+          event,
+          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        );
+      }
+      ctx.response = await ctx.render(event);
+      if (!ctx.response) {
+        const _currentStatus = getResponseStatus(event);
+        setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
+        return send(
+          event,
+          "No response returned from render handler: " + event.path
+        );
+      }
+    }
+    await nitroApp.hooks.callHook("render:response", ctx.response, ctx);
+    if (ctx.response.headers) {
+      setResponseHeaders(event, ctx.response.headers);
+    }
+    if (ctx.response.statusCode || ctx.response.statusMessage) {
+      setResponseStatus(
+        event,
+        ctx.response.statusCode,
+        ctx.response.statusMessage
+      );
+    }
+    return ctx.response.body;
+  });
+}
+
+const scheduledTasks = false;
+
+const tasks = {
+  
+};
+
+const __runningTasks__ = {};
+async function runTask(name, {
+  payload = {},
+  context = {}
+} = {}) {
+  if (__runningTasks__[name]) {
+    return __runningTasks__[name];
+  }
+  if (!(name in tasks)) {
+    throw createError({
+      message: `Task \`${name}\` is not available!`,
+      statusCode: 404
+    });
+  }
+  if (!tasks[name].resolve) {
+    throw createError({
+      message: `Task \`${name}\` is not implemented!`,
+      statusCode: 501
+    });
+  }
+  const handler = await tasks[name].resolve();
+  const taskEvent = { name, payload, context };
+  __runningTasks__[name] = handler.run(taskEvent);
+  try {
+    const res = await __runningTasks__[name];
+    return res;
+  } finally {
+    delete __runningTasks__[name];
+  }
+}
+
+function buildAssetsDir() {
+  return useRuntimeConfig().app.buildAssetsDir;
+}
+function buildAssetsURL(...path) {
+  return joinRelativeURL(publicAssetsURL(), buildAssetsDir(), ...path);
+}
+function publicAssetsURL(...path) {
+  const app = useRuntimeConfig().app;
+  const publicBase = app.cdnURL || app.baseURL;
+  return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
+}
+
+const warnOnceSet = /* @__PURE__ */ new Set();
+const DEFAULT_ENDPOINT = "https://api.iconify.design";
+const _xeuFh2 = defineCachedEventHandler(async (event) => {
+  const url = getRequestURL(event);
+  if (!url)
+    return createError({ status: 400, message: "Invalid icon request" });
+  const options = useAppConfig().icon;
+  const collectionName = event.context.params?.collection?.replace(/\.json$/, "");
+  const collection = collectionName ? await collections[collectionName]?.() : null;
+  const apiEndPoint = options.iconifyApiEndpoint || DEFAULT_ENDPOINT;
+  const icons = url.searchParams.get("icons")?.split(",");
+  if (collection) {
+    if (icons?.length) {
+      const data = getIcons(
+        collection,
+        icons
+      );
+      consola$1.debug(`[Icon] serving ${(icons || []).map((i) => "`" + collectionName + ":" + i + "`").join(",")} from bundled collection`);
+      return data;
+    }
+  } else {
+    if (collectionName && !warnOnceSet.has(collectionName) && apiEndPoint === DEFAULT_ENDPOINT) {
+      consola$1.warn([
+        `[Icon] Collection \`${collectionName}\` is not found locally`,
+        `We suggest to install it via \`npm i -D @iconify-json/${collectionName}\` to provide the best end-user experience.`
+      ].join("\n"));
+      warnOnceSet.add(collectionName);
+    }
+  }
+  if (options.fallbackToApi === true || options.fallbackToApi === "server-only") {
+    const apiUrl = new URL("./" + basename(url.pathname) + url.search, apiEndPoint);
+    consola$1.debug(`[Icon] fetching ${(icons || []).map((i) => "`" + collectionName + ":" + i + "`").join(",")} from iconify api`);
+    if (apiUrl.host !== new URL(apiEndPoint).host) {
+      return createError({ status: 400, message: "Invalid icon request" });
+    }
+    try {
+      const data = await $fetch(apiUrl.href);
+      return data;
+    } catch (e) {
+      consola$1.error(e);
+      if (e.status === 404)
+        return createError({ status: 404 });
+      else
+        return createError({ status: 500, message: "Failed to fetch fallback icon" });
+    }
+  }
+  return createError({ status: 404 });
+}, {
+  group: "nuxt",
+  name: "icon",
+  getKey(event) {
+    const collection = event.context.params?.collection?.replace(/\.json$/, "") || "unknown";
+    const icons = String(getQuery$1(event).icons || "");
+    return `${collection}_${icons.split(",")[0]}_${icons.length}_${hash$1(icons)}`;
+  },
+  swr: true,
+  maxAge: 60 * 60 * 24 * 7
+  // 1 week
+});
+
 const _lazy_dA8Kpd = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '/__nuxt_error', handler: _lazy_dA8Kpd, lazy: true, middleware: false, method: undefined },
+  { route: '/api/_nuxt_icon/:collection', handler: _xeuFh2, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_dA8Kpd, lazy: true, middleware: false, method: undefined }
 ];
 
@@ -1244,82 +1606,6 @@ function useNitroApp() {
 }
 runNitroPlugins(nitroApp$1);
 
-function defineRenderHandler(render) {
-  const runtimeConfig = useRuntimeConfig();
-  return eventHandler(async (event) => {
-    const nitroApp = useNitroApp();
-    const ctx = { event, render, response: void 0 };
-    await nitroApp.hooks.callHook("render:before", ctx);
-    if (!ctx.response) {
-      if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
-        setResponseHeader(event, "Content-Type", "image/x-icon");
-        return send(
-          event,
-          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        );
-      }
-      ctx.response = await ctx.render(event);
-      if (!ctx.response) {
-        const _currentStatus = getResponseStatus(event);
-        setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
-        return send(
-          event,
-          "No response returned from render handler: " + event.path
-        );
-      }
-    }
-    await nitroApp.hooks.callHook("render:response", ctx.response, ctx);
-    if (ctx.response.headers) {
-      setResponseHeaders(event, ctx.response.headers);
-    }
-    if (ctx.response.statusCode || ctx.response.statusMessage) {
-      setResponseStatus(
-        event,
-        ctx.response.statusCode,
-        ctx.response.statusMessage
-      );
-    }
-    return ctx.response.body;
-  });
-}
-
-const scheduledTasks = false;
-
-const tasks = {
-  
-};
-
-const __runningTasks__ = {};
-async function runTask(name, {
-  payload = {},
-  context = {}
-} = {}) {
-  if (__runningTasks__[name]) {
-    return __runningTasks__[name];
-  }
-  if (!(name in tasks)) {
-    throw createError({
-      message: `Task \`${name}\` is not available!`,
-      statusCode: 404
-    });
-  }
-  if (!tasks[name].resolve) {
-    throw createError({
-      message: `Task \`${name}\` is not implemented!`,
-      statusCode: 501
-    });
-  }
-  const handler = await tasks[name].resolve();
-  const taskEvent = { name, payload, context };
-  __runningTasks__[name] = handler.run(taskEvent);
-  try {
-    const res = await __runningTasks__[name];
-    return res;
-  } finally {
-    delete __runningTasks__[name];
-  }
-}
-
 if (!globalThis.crypto) {
   globalThis.crypto = nodeCrypto;
 }
@@ -1444,18 +1730,6 @@ function createHead(options = {}) {
 
 function resolveUnrefHeadInput(input) {
   return walkResolver(input, VueResolver);
-}
-
-function buildAssetsDir() {
-  return useRuntimeConfig().app.buildAssetsDir;
-}
-function buildAssetsURL(...path) {
-  return joinRelativeURL(publicAssetsURL(), buildAssetsDir(), ...path);
-}
-function publicAssetsURL(...path) {
-  const app = useRuntimeConfig().app;
-  const publicBase = app.cdnURL || app.baseURL;
-  return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
 }
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
