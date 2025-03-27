@@ -14,7 +14,12 @@
     <!-- ไอเท็มที่เลื่อน -->
     <div class="absolute z-50 top-[20dvh] w-full space-y-[15vh]">
       <div class="wrapper">
-        <div class="item item1"></div>
+        <div class="item item1">
+          <div class ="flex  items-center space-x-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-20 h-20 mx-auto">
+            <p class="text-center Rubik text-[20px]">Client 1</p>
+          </div>
+        </div>
         <div class="item item2"></div>
         <div class="item item3"></div>
         <div class="item item4"></div>
@@ -33,21 +38,7 @@
         <div class="item item6"></div>
         <div class="item item7"></div>
         <div class="item item8"></div>
-
       </div>
-      <div class="wrapper">
-        <div class="item item1"></div>
-        <div class="item item2"></div>
-        <div class="item item3"></div>
-        <div class="item item4"></div>
-        <div class="item item5"></div>
-        <div class="item item6"></div>
-        <div class="item item7"></div>
-        <div class="item item8"></div>
-
-      </div>
-
-
     </div>
   </div>
 </template>
@@ -102,18 +93,21 @@ onMounted(() => {
   }
 }
 
+
+
 .item {
-  width: 200px;
+  width: 300px;
   height: 100px;
-  background-color: red;
-  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.761);
+  border-radius:20px;
   position: absolute;
-  left: max(calc(200px * 8), 100%);
+  left: max(calc(300px * 8), 100%);
   animation-name: scrollLeft;
   animation-duration: 30s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
 
 .item1 {
   animation-delay: calc(30s / 8 * (8 - 1) * -1);
