@@ -2,7 +2,11 @@
     <div class="w-full h-screen relative overflow-hidden">
        
   <div class="absolute top-[15vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-    <div class="Rubik text-[30px] text-white">
+    <div class="Rubik text-[40px]"style="
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+          ">
       SHOW CASE
     </div>
     

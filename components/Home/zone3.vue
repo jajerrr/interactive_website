@@ -1,27 +1,21 @@
 <template>
   <div class="w-full h-screen relative overflow-hidden">
     <div>
-      <div class="absolute z-20 top-[20vh] left-[10dvh]">
+      <div class="absolute z-50 top-10 items-center flex justify-center w-full">
         <div
-          class="Rubik text-[50px]"
+          class="Rubik text-[200px] text-center flashyText"
           style="
-            background: linear-gradient(
-              270deg,
-              rgba(24, 57, 192, 1) 10%,
-              rgba(255, 255, 255, 1) 100%
-            );
-            -webkit-background-clip: text;
             color: transparent;
-            -webkit-text-stroke: 2px transparent;
+            -webkit-text-stroke: 5px white;
           "
         >
-          TOUCH THE REALITY
+          TOUCH<br/>THE<br/>REALITY
         </div>
-        <div class="Rubik text-[16px] text-white">
+        <!-- <div class="Rubik text-[16px] text-white">
           Loren ipsun dolor sit anet, consectetur adipisci elit,<br />
           sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua.<br />
           Ut enin ad ninin venian, quis nostrun exercitationen ullan
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="absolute bottom-0 right-0 z-20">
@@ -58,11 +52,26 @@
         playsinline
         class="w-screen h-screen object-cover"
       >
-        <source src="assets/video/galaxy2.mp4" type="video/mp4" />
+        <source src="assets/video/rock.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
 </template>
 
-<style></style>
+<style>
+@keyframes flashStroke {
+  0%,
+  100% {
+    -webkit-text-stroke: 5px rgb(251, 131, 247);
+  }
+  50% {
+    -webkit-text-stroke: 5px rgb(93, 0, 112);
+  }
+}
+
+.flashyText {
+  color: transparent;
+  animation: flashStroke 1s infinite;
+}
+</style>

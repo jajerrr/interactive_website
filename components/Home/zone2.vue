@@ -21,9 +21,12 @@
             Virtual Reality, and 3D Animation
           </div>
         </div>
-        <div class ="absolute z-20 top-[10vh] right-[-15vw]">
-            <img src="assets/video/2.gif" alt="">
+        <div class ="absolute z-20 top-[30dvh] right-[-15vw]">
+            <img src="assets/video/2.gif" alt="ring">
         </div>
+        <div class="absolute top-[-10dvh] left-[-10vw] z-30">
+      <img src="assets/video/1.gif" class="w-auto h-auto" alt="hologram" />
+    </div>
     
     </div>
       <bg>
