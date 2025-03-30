@@ -1,12 +1,12 @@
 <template>
-  <div class="w-full h-screen relative overflow-hidden">
+  <div class="w-full h-screen relative overflow-hidden bg-black">
     <!-- Spline เป็นพื้นหลัง -->
-    <spline-viewer url="https://prod.spline.design/sJSltAQD0MtCown7/scene.splinecode"
-      class="spline-background"></spline-viewer>
+    <!-- <spline-viewer url="https://prod.spline.design/sJSltAQD0MtCown7/scene.splinecode"
+      class="spline-background"></spline-viewer> -->
 
     <!-- ข้อความ -->
     <div class="absolute z-50 top-10 flex justify-center w-full">
-      <div class="Rubik text-[100px] text-center" style="color: transparent; -webkit-text-stroke: 3px greenyellow">
+      <div class="Rubik text-[70px] text-center" style="color: transparent; -webkit-text-stroke: 3px greenyellow">
         CLIENT WHO WORK WITH US
       </div>
     </div>
@@ -15,29 +15,87 @@
     <div class="absolute z-50 top-[20dvh] w-full space-y-[15vh]">
       <div class="wrapper">
         <div class="item item1">
-          <div class ="flex  items-center space-x-4">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-20 h-20 mx-auto">
-            <p class="text-center Rubik text-[20px]">Client 1</p>
+          <div class ="flex justify-center w-full items-center space-x-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
+            <p class="text-center Inter text-[20px]">Client name
+            </p>
           </div>
         </div>
-        <div class="item item2"></div>
-        <div class="item item3"></div>
-        <div class="item item4"></div>
-        <div class="item item5"></div>
-        <div class="item item6"></div>
-        <div class="item item7"></div>
-        <div class="item item8"></div>
+        <div class="item item2">
+          <div class ="flex justify-center w-full items-center space-x-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
+            <p class="text-center Inter text-[20px]">Client name
+            </p>
+          </div>
+        </div>
+        <div class="item item3">
+          <div class ="flex justify-center w-full items-center space-x-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
+            <p class="text-center Inter text-[20px]">Client name
+            </p>
+          </div>
+        </div>
+        <div class="item item4">
+          <div class ="flex justify-center w-full items-center space-x-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
+            <p class="text-center Inter text-[20px]">Client name
+            </p>
+          </div>
+        </div>
+        <div class="item item5">
+          <div class ="flex justify-center w-full items-center space-x-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
+            <p class="text-center Inter text-[20px]">Client name
+            </p>
+          </div>
+        </div>
+        <div class="item item6">
+          <div class ="flex justify-center w-full items-center space-x-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
+            <p class="text-center Inter text-[20px]">Client name
+            </p>
+          </div>
+        </div>
+        <div class="item item7">
+          <div class ="flex justify-center w-full items-center space-x-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
+            <p class="text-center Inter text-[20px]">Client name
+            </p>
+          </div>
+        </div>
+        <div class="item item8">
+          <div class ="flex justify-center w-full items-center space-x-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
+            <p class="text-center Inter text-[20px]">Client name
+            </p>
+          </div>
+        </div>
 
       </div>
       <div class="wrapper">
-        <div class="item item1"></div>
-        <div class="item item2"></div>
-        <div class="item item3"></div>
-        <div class="item item4"></div>
-        <div class="item item5"></div>
-        <div class="item item6"></div>
-        <div class="item item7"></div>
-        <div class="item item8"></div>
+        <div
+      v-for="(client, index) in clients"
+      :key="index"
+      :class="`item item${index + 1}`"
+    >
+      <div class="flex justify-center w-full items-center space-x-4">
+        <img :src="client.icon" alt="icon" class="w-10 h-10 mx-auto" />
+        <p class="text-center text-white Inter text-[20px]">{{ client.name }}</p>
+      </div>
+    </div>
+      </div>
+
+      <div class="wrapper">
+        <div
+      v-for="(client, index) in clients"
+      :key="index"
+      :class="`item item${index + 1}`"
+    >
+      <div class="flex justify-center w-full items-center space-x-4">
+        <img :src="client.icon" alt="icon" class="w-10 h-10 mx-auto" />
+        <p class="text-center text-white Inter text-[20px]">{{ client.name }}</p>
+      </div>
+    </div>
       </div>
     </div>
   </div>
@@ -46,10 +104,21 @@
 <script setup>
 import { onMounted } from "vue";
 
-onMounted(() => {
-  import("https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js");
-});
-</script>
+const clients = [
+  { name: 'Client name 1', icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
+  { name: 'Client name 2', icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
+  { name: 'Client name 3', icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
+  { name: 'Client name 4', icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
+  { name: 'Client name 5', icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
+  { name: 'Client name 6', icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
+  { name: 'Client name 7', icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
+  { name: 'Client name 8', icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
+]
+
+// onMounted(() => {
+//   import("https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js");
+// });
+// </script>
 
 <style scoped>
 /* Spline Viewer เป็นพื้นหลัง */
@@ -94,19 +163,23 @@ onMounted(() => {
 }
 
 
-
 .item {
   width: 300px;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.761);
-  border-radius:20px;
+  background-color: rgba(255, 255, 255, 0.673);
+  border-radius: 20px;
   position: absolute;
   left: max(calc(300px * 8), 100%);
   animation-name: scrollLeft;
   animation-duration: 30s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+
+  display: flex;               /* เพิ่ม Flex */
+  justify-content: center;     /* จัดแนวนอน */
+  align-items: center;         /* จัดแนวตั้ง */
 }
+
 
 
 .item1 {
