@@ -1,108 +1,63 @@
 <template>
-  <div class="w-full h-screen relative overflow-hidden bg-black">
+  <div class="w-full h-screen relative  ">
+
+    <div class="absolute top-[-25vw] left-[-25vw] z-1">
+        <img src="assets/images/png/blue.png" class="w-auto h-auto" />
+    </div>
+    <div class="absolute top-[10vw] right-[-25vw] z-1">
+        <img src="assets/images/png/blue.png" class="w-auto h-auto" />
+    </div>
+    
     <!-- Spline เป็นพื้นหลัง -->
     <!-- <spline-viewer url="https://prod.spline.design/sJSltAQD0MtCown7/scene.splinecode"
-      class="spline-background"></spline-viewer> -->
+      class="spline-background z-1"></spline-viewer> -->
 
     <!-- ข้อความ -->
     <div class="absolute z-50 top-10 flex justify-center w-full">
-      <div class="Rubik text-[70px] text-center" style="color: transparent; -webkit-text-stroke: 3px greenyellow">
+      <div class="Rubik text-[70px] text-center" style="color: transparent; -webkit-text-stroke: 3px #29FF7F;">
         CLIENT WHO WORK WITH US
       </div>
     </div>
 
     <!-- ไอเท็มที่เลื่อน -->
-    <div class="absolute z-50 top-[20dvh] w-full space-y-[15vh]">
+    <div class="absolute z-50 top-[20dvh] w-full space-y-[10vh]">
       <div class="wrapper">
-        <div class="item item1">
-          <div class ="flex justify-center w-full items-center space-x-4">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
-            <p class="text-center Inter text-[20px]">Client name
-            </p>
+        <div v-for="(client, index) in clients" :key="index" :class="`item item${index + 1}`">
+          <div class="flex justify-center w-full items-center space-x-4">
+            <img :src="client.icon" alt="icon" class="w-10 h-10 mx-auto" />
+            <p class="text-center text-white Inter text-[20px]">{{ client.name }}</p>
           </div>
         </div>
-        <div class="item item2">
-          <div class ="flex justify-center w-full items-center space-x-4">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
-            <p class="text-center Inter text-[20px]">Client name
-            </p>
-          </div>
-        </div>
-        <div class="item item3">
-          <div class ="flex justify-center w-full items-center space-x-4">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
-            <p class="text-center Inter text-[20px]">Client name
-            </p>
-          </div>
-        </div>
-        <div class="item item4">
-          <div class ="flex justify-center w-full items-center space-x-4">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
-            <p class="text-center Inter text-[20px]">Client name
-            </p>
-          </div>
-        </div>
-        <div class="item item5">
-          <div class ="flex justify-center w-full items-center space-x-4">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
-            <p class="text-center Inter text-[20px]">Client name
-            </p>
-          </div>
-        </div>
-        <div class="item item6">
-          <div class ="flex justify-center w-full items-center space-x-4">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
-            <p class="text-center Inter text-[20px]">Client name
-            </p>
-          </div>
-        </div>
-        <div class="item item7">
-          <div class ="flex justify-center w-full items-center space-x-4">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
-            <p class="text-center Inter text-[20px]">Client name
-            </p>
-          </div>
-        </div>
-        <div class="item item8">
-          <div class ="flex justify-center w-full items-center space-x-4">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="icon" class="w-10 h-10 mx-auto">
-            <p class="text-center Inter text-[20px]">Client name
-            </p>
-          </div>
-        </div>
-
       </div>
       <div class="wrapper">
-        <div
-      v-for="(client, index) in clients"
-      :key="index"
-      :class="`item item${index + 1}`"
-    >
-      <div class="flex justify-center w-full items-center space-x-4">
-        <img :src="client.icon" alt="icon" class="w-10 h-10 mx-auto" />
-        <p class="text-center text-white Inter text-[20px]">{{ client.name }}</p>
+        <div v-for="(client, index) in clients" :key="index" :class="`item item${index + 1}`">
+          <div class="flex justify-center w-full items-center space-x-4">
+            <img :src="client.icon" alt="icon" class="w-10 h-10 mx-auto" />
+            <p class="text-center text-white Inter text-[20px]">{{ client.name }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div v-for="(client, index) in clients" :key="index" :class="`item item${index + 1}`">
+          <div class="flex justify-center w-full items-center space-x-4">
+            <img :src="client.icon" alt="icon" class="w-10 h-10 mx-auto" />
+            <p class="text-center text-white Inter text-[20px]">{{ client.name }}</p>
+          </div>
+        </div>
       </div>
     </div>
-      </div>
 
-      <div class="wrapper">
-        <div
-      v-for="(client, index) in clients"
-      :key="index"
-      :class="`item item${index + 1}`"
-    >
-      <div class="flex justify-center w-full items-center space-x-4">
-        <img :src="client.icon" alt="icon" class="w-10 h-10 mx-auto" />
-        <p class="text-center text-white Inter text-[20px]">{{ client.name }}</p>
-      </div>
-    </div>
-      </div>
+    <div class="absolute z-50 bottom-10 flex justify-center w-full">
+      <button
+        class="Rubik text-[30px] text-center border-4 border-[#29FF7F] bg-transparent rounded-full px-5 py-3 text-[#29FF7F]">
+        JOIN US
+      </button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted } from 'vue'
 
 const clients = [
   { name: 'Client name 1', icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
@@ -115,10 +70,10 @@ const clients = [
   { name: 'Client name 8', icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
 ]
 
-// onMounted(() => {
-//   import("https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js");
-// });
-// </script>
+onMounted(() => {
+  import("https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js");
+});
+</script>
 
 <style scoped>
 /* Spline Viewer เป็นพื้นหลัง */
@@ -175,9 +130,12 @@ const clients = [
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 
-  display: flex;               /* เพิ่ม Flex */
-  justify-content: center;     /* จัดแนวนอน */
-  align-items: center;         /* จัดแนวตั้ง */
+  display: flex;
+  /* เพิ่ม Flex */
+  justify-content: center;
+  /* จัดแนวนอน */
+  align-items: center;
+  /* จัดแนวตั้ง */
 }
 
 

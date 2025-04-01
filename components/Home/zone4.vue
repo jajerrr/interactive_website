@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-screen relative overflow-hidden">
+    <div class="w-full h-auto relative overflow-hidden">
       <div>
         <video
           autoplay
