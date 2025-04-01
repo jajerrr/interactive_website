@@ -14,7 +14,7 @@ export { useCookie, refreshCookie } from '#app/composables/cookie';
 export { onPrehydrate, prerenderRoutes, useRequestHeader, useRequestHeaders, useResponseHeader, useRequestEvent, useRequestFetch, setResponseStatus } from '#app/composables/ssr';
 export { onNuxtReady } from '#app/composables/ready';
 export { preloadComponents, prefetchComponents, preloadRouteComponents } from '#app/composables/preload';
-export { abortNavigation, addRouteMiddleware, defineNuxtRouteMiddleware, setPageLayout, navigateTo, useRoute, useRouter, onBeforeRouteLeave, onBeforeRouteUpdate } from '#app/composables/router';
+export { abortNavigation, addRouteMiddleware, defineNuxtRouteMiddleware, setPageLayout, navigateTo, useRoute, useRouter } from '#app/composables/router';
 export { isPrerendered, loadPayload, preloadPayload, definePayloadReducer, definePayloadReviver } from '#app/composables/payload';
 export { useLoadingIndicator } from '#app/composables/loading-indicator';
 export { getAppManifest, getRouteRules } from '#app/composables/manifest';
@@ -24,8 +24,6 @@ export { usePreviewMode } from '#app/composables/preview';
 export { useRouteAnnouncer } from '#app/composables/route-announcer';
 export { useRuntimeHook } from '#app/composables/runtime-hook';
 export { useHead, useHeadSafe, useServerHeadSafe, useServerHead, useSeoMeta, useServerSeoMeta, injectHead } from '#app/composables/head';
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 export { onBeforeRouteLeave, onBeforeRouteUpdate, useLink } from 'vue-router';
 export { withCtx, withDirectives, withKeys, withMemo, withModifiers, withScopeId, onActivated, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onDeactivated, onErrorCaptured, onMounted, onRenderTracked, onRenderTriggered, onServerPrefetch, onUnmounted, onUpdated, computed, customRef, isProxy, isReactive, isReadonly, isRef, markRaw, proxyRefs, reactive, readonly, ref, shallowReactive, shallowReadonly, shallowRef, toRaw, toRef, toRefs, triggerRef, unref, watch, watchEffect, watchPostEffect, watchSyncEffect, isShallow, effect, effectScope, getCurrentScope, onScopeDispose, defineComponent, defineAsyncComponent, resolveComponent, getCurrentInstance, h, inject, hasInjectionContext, nextTick, provide, mergeModels, toValue, useModel, useAttrs, useCssModule, useCssVars, useSlots, useTransitionState, useId, useTemplateRef, useShadowRoot, Component, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue';
 export { requestIdleCallback, cancelIdleCallback } from '#app/compat/idle-callback';
@@ -38,17 +36,4 @@ export { persistedState } from '../node_modules/@pinia-plugin-persistedstate/nux
 export { useSwiper, useSwiperSlide } from 'swiper/vue';
 export { A11y as SwiperA11y, Autoplay as SwiperAutoplay, Controller as SwiperController, EffectCards as SwiperEffectCards, EffectCoverflow as SwiperEffectCoverflow, EffectCreative as SwiperEffectCreative, EffectCube as SwiperEffectCube, EffectFade as SwiperEffectFade, EffectFlip as SwiperEffectFlip, FreeMode as SwiperFreeMode, Grid as SwiperGrid, HashNavigation as SwiperHashNavigation, History as SwiperHistory, Keyboard as SwiperKeyboard, Manipulation as SwiperManipulation, Mousewheel as SwiperMousewheel, Navigation as SwiperNavigation, Pagination as SwiperPagination, Parallax as SwiperParallax, Scrollbar as SwiperScrollbar, Thumbs as SwiperThumbs, Virtual as SwiperVirtual, Zoom as SwiperZoom } from 'swiper/modules';
 export { useGsap, useScrollTrigger } from './gsapComposables';
-export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
-=======
-export { withCtx, withDirectives, withKeys, withMemo, withModifiers, withScopeId, onActivated, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onDeactivated, onErrorCaptured, onMounted, onRenderTracked, onRenderTriggered, onServerPrefetch, onUnmounted, onUpdated, computed, customRef, isProxy, isReactive, isReadonly, isRef, markRaw, proxyRefs, reactive, readonly, ref, shallowReactive, shallowReadonly, shallowRef, toRaw, toRef, toRefs, triggerRef, unref, watch, watchEffect, watchPostEffect, watchSyncEffect, isShallow, effect, effectScope, getCurrentScope, onScopeDispose, defineComponent, defineAsyncComponent, resolveComponent, getCurrentInstance, h, inject, hasInjectionContext, nextTick, provide, mergeModels, toValue, useModel, useAttrs, useCssModule, useCssVars, useSlots, useTransitionState, useId, useTemplateRef, useShadowRoot, Component, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue';
-export { requestIdleCallback, cancelIdleCallback } from '#app/compat/idle-callback';
-export { setInterval } from '#app/compat/interval';
-export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
->>>>>>> Stashed changes
-=======
-export { withCtx, withDirectives, withKeys, withMemo, withModifiers, withScopeId, onActivated, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onDeactivated, onErrorCaptured, onMounted, onRenderTracked, onRenderTriggered, onServerPrefetch, onUnmounted, onUpdated, computed, customRef, isProxy, isReactive, isReadonly, isRef, markRaw, proxyRefs, reactive, readonly, ref, shallowReactive, shallowReadonly, shallowRef, toRaw, toRef, toRefs, triggerRef, unref, watch, watchEffect, watchPostEffect, watchSyncEffect, isShallow, effect, effectScope, getCurrentScope, onScopeDispose, defineComponent, defineAsyncComponent, resolveComponent, getCurrentInstance, h, inject, hasInjectionContext, nextTick, provide, mergeModels, toValue, useModel, useAttrs, useCssModule, useCssVars, useSlots, useTransitionState, useId, useTemplateRef, useShadowRoot, Component, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue';
-export { requestIdleCallback, cancelIdleCallback } from '#app/compat/idle-callback';
-export { setInterval } from '#app/compat/interval';
-export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
->>>>>>> Stashed changes
