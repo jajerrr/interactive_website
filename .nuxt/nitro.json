@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "date": "2025-03-28T05:53:44.122Z",
+=======
+  "date": "2025-03-27T12:08:37.420Z",
+>>>>>>> Stashed changes
   "preset": "nitro-dev",
   "framework": {
     "name": "nuxt",
@@ -11,7 +15,11 @@
   "dev": {
     "pid": 3222,
     "workerAddress": {
+<<<<<<< Updated upstream
       "socketPath": "/var/folders/g_/n900xwqj38b03lq2724tmnc00000gn/T/nitro-worker-3222-25-25-5248.sock"
+=======
+      "socketPath": "\\\\.\\pipe\\nitro-worker-8316-12-12-5996.sock"
+>>>>>>> Stashed changes
     }
   }
 }
