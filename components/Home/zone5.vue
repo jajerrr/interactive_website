@@ -12,7 +12,7 @@
     
     
   </div>
-  <div class ="w-full absolute top-[40vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+  <div class ="w-full absolute top-[50vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
     <HomeCardpanorama/>
   </div>
   

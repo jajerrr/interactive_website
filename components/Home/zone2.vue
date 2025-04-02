@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full relative overflow-hidden">
+  <div class="w-full relative">
     <div>
         <div class ="absolute z-20 top-[30vh] left-[10vw]">
             <img src="assets/images/png/vrzone2.png" alt="">
@@ -30,9 +30,33 @@
     
     </div>
       <bg>
-        <img src="assets/images/png/Group 35.png"  class ="w-screen absolute "/>
         <img src="assets/images/png/image 133.png" class =" h-[100vh] "/>
-      </bg>  </div>
+      </bg>  
+      <div class=" w-screen h-auto overflow-hidden absolute top-0 z-50">
+    <div class="infinite-scrolling"></div>
+  </div>
+      </div>
 </template>
 
-<style></style>
+<style>
+
+
+.infinite-scrolling {
+  background: url("assets/images/png/banner.png") repeat-x;
+  height: 645px;
+  width: 5760px; /* กว้าง 3 เท่าของภาพ */
+  animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1920px); /* เลื่อนซ้ำ */
+  }
+}
+
+
+
+</style>

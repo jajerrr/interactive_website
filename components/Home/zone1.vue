@@ -1,7 +1,9 @@
 <template>
   <div class="w-full h-screen relative overflow-hidden">
     <div>
-     
+     <div class="absolute top-0 left-0 w-full z-50">
+      <HomeNavbar />
+     </div>
       
       <div class="absolute z-20 top-[25dvh] left-[15dvh] ">
         <div

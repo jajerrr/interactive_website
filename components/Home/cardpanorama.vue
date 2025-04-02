@@ -1,25 +1,32 @@
 <template>
   <div >
   <div @click="resetClick" class="flex">
-    <Swiper class="w-screen overflow-hidden bg-transparent "
+    <Swiper class="w-full h-[500px]"
    
       :modules="[SwiperEffectCoverflow, SwiperPagination, SwiperNavigation]" 
-      :effect="'coverflow'" :grabCursor="true"
-      :centeredSlides="true" :slidesPerView="'auto'" :coverflowEffect="{
-        rotate: 2,
-        stretch: 0,
-        depth: 100,
-        modifier: 2,
-        slideShadows: true,
-        centeredSlides: true
-      }" :navigation="{
+      :effect="'coverflow'" 
+      :grabCursor="true"
+      :centeredSlides="true" 
+      :slidesPerView="'auto'" 
+      :coverflowEffect="{
+            rotate: 10,
+            stretch: 10,
+            depth: 100,
+            modifier: 3,
+            slideShadows: true,
+          }" 
+          :navigation="{
         prevEl: '.slidePrev-btn',
         nextEl: '.slideNext-btn'
-      }" :loop="false" :pagination="false" @slideChange="onSlideChange">
+      }" 
+      :loop="false" 
+      :pagination="false"
+       @slideChange="onSlideChange">
       <!-- สร้าง SwiperSlide สำหรับการ์ดแต่ละใบ -->
-      <SwiperSlide v-for="(card, index) in cards" :key="index" class="flex " @click.stop="toggleClick(index)"
-      style="width: 230px !important">
-        <div class="card_effect justify-center" :class="{ clicked: card.isClicked }"
+      <SwiperSlide v-for="(card, index) in cards" :key="index" class="flex" @click.stop="toggleClick(index)"
+       style="width: 50% !important;"
+     >
+        <div class="card_effect  justify-center " :class="{ clicked: card.isClicked }"
           :style="{ backgroundImage: `url(${card.backgroundImage})` }">
           <h4 v-if="card.isClicked" class="">{{ card.title }}</h4>
           <p v-if="card.isClicked" class="scrollable-text">{{ card.description }}</p>
@@ -91,37 +98,37 @@ const cards = reactive([
     title: "Products",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/cat.jpg",
+    backgroundImage: "/images/img/riize.jpg",
   },
   {
     title: "Categories",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/cat.jpg",
+    backgroundImage: "/images/img/riize.jpg",
   },
   {
     title: "Services",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/cat.jpg",
+    backgroundImage: "/images/img/riize.jpg",
   },
   {
     title: "Products",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/cat.jpg",
+    backgroundImage: "/images/img/riize.jpg",
   },
   {
     title: "Categories",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/cat.jpg",
+    backgroundImage: "/images/img/riize.jpg",
   },
   {
     title: "Services",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/cat.jpg",
+    backgroundImage: "/images/img/riize.jpg",
   },
 ]);
 
@@ -177,9 +184,10 @@ function resetClick() {
 }
 
 .card_effect {
+  height: 500px;
+  width: 100%;
   background-size: cover;
   background-position: center;
-  height: 350px;
   border-radius: 15px;
   cursor: pointer;
   position: relative;
@@ -187,7 +195,6 @@ function resetClick() {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 15px 25px rgba(0, 0, 0, 0.3),
     0 0 0 1px rgba(255, 255, 255, 0.1);
   padding: 56px 16px 16px 16px;
-  width: 230px;
 }
 
 .slide-arrow {
