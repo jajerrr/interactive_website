@@ -1,10 +1,10 @@
 <template>
-  <div class="w-full h-screen relative  ">
+  <div class="w-full h-screen relative ">
 
-    <div class="absolute top-[-25vw] left-[-25vw] z-1">
+    <div class="absolute top-[-25vw] left-[-25vw] z-50">
         <img src="assets/images/png/blue.png" class="w-auto h-auto" />
     </div>
-    <div class="absolute top-[10vw] right-[-25vw] z-1">
+    <div class="absolute top-[10vw] right-[-25vw] z-50">
         <img src="assets/images/png/blue.png" class="w-auto h-auto" />
     </div>
     
@@ -13,7 +13,7 @@
       class="spline-background z-1"></spline-viewer> -->
 
     <!-- ข้อความ -->
-    <div class="absolute z-50 top-10 flex justify-center w-full">
+    <div class="absolute z-50 top-[10vh] flex justify-center w-full">
       <div class="Rubik text-[70px] text-center" style="color: transparent; -webkit-text-stroke: 3px #29FF7F;">
         CLIENT WHO WORK WITH US
       </div>

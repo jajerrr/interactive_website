@@ -4,14 +4,14 @@
         <div class ="absolute z-20 top-[30vh] left-[10vw]">
             <img src="assets/images/png/vrzone2.png" alt="">
         </div>
-        <div class ="absolute z-20 top-[45vh] right-[10vw]">
-            <div class ="text-[50px] Rubik"  style="
+        <div class ="absolute z-20 top-[40vh] right-[10vw]">
+            <div class ="text-[60px] Rubik"  style="
             background: linear-gradient(270deg, rgba(84,84,208,1) 10%, rgba(255,34,38,1) 100%);
             -webkit-background-clip: text;
             color: transparent;
             -webkit-text-stroke: 2px transparent;
           ">CREATING<br/>INNOVATION EXPERIENCES </div>
-          <div class ="text-[20px] Rubik text-white">
+          <div class ="text-[20px] Rubik text-white mt-10">
             through advanced media to drive your business<br/> 
             into the new era seamlessly. Our goal is to leave <br/> 
             a lasting impression on customers and users by <br/> 
@@ -24,9 +24,9 @@
         <div class ="absolute z-20 top-[30dvh] right-[-15vw]">
             <img src="assets/video/2.gif" alt="ring">
         </div>
-        <div class="absolute top-[-10dvh] left-[-10vw] z-30">
+        <!-- <div class="absolute top-[-10dvh] left-[-10vw] z-30">
       <img src="assets/video/1.gif" class="w-auto h-auto" alt="hologram" />
-    </div>
+    </div> -->
     
     </div>
       <bg>

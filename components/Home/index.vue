@@ -3,42 +3,33 @@
 
   <div class="w-full h-auto bg-black relative   overflow-hidden scrollContainer cursor-default">
 
-    <!-----------------------------------navbar------------------------------------>
     
    
 
-    <!-----------------------------------first content ---------------------------->
     <div >
-      <HomeZone1 />
+    <HomeZone1 />
     </div>
-    <!---------------------------------- second content --------------------------->
     <div>
       <HomeZone2 />
     </div>
-    <!-----------------------------------third content ---------------------------->
 
     <div >
       <div  >
         <HomeZone3 />
       </div>
 
-      <!-----------------------------------forth content ---------------------------->
 
       <div  >
         <HomeZone4 />
       </div>
 
-      <!-----------------------------------fiv content ---------------------------->
 
       <div  >
         <HomeZone5 />
       </div>
 
-      <!-----------------------------------six content ------------------------------>
 
       
-
-      <!-----------------------------------seven content ---------------------------->
       <div  >
         <HomeZone7 />
       </div>
@@ -47,11 +38,12 @@
         <HomeZone8 />
       </div>
 
-      <!----------------------------------footer content ---------------------------->
       <div>
         <HomeFooter />
       </div>
     </div>
+
+    
 
 
 
@@ -59,6 +51,9 @@
 </template>
 
 <script setup>
+import { HomeZone3 } from '#components';
+import rocket from '~/components/Model/rocket.vue'
+
 
 // import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";

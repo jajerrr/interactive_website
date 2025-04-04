@@ -5,9 +5,9 @@
       <HomeNavbar />
      </div>
       
-      <div class="absolute z-20 top-[25dvh] left-[15dvh] ">
+      <div class="absolute z-10 bottom-0 flex flex-col items-center justify-center w-full h-screen text-center">
         <div
-          class="Rubik text-[150px]"
+          class="Rubik text-[12vw]"
           style="
             -webkit-background-clip: text;
             color: transparent;
@@ -17,29 +17,19 @@
           INTERACTIVE
         </div>
 
-        <div class="Rubik text-[150px]" style="
-            background: linear-gradient(
-              270deg,
-              rgba(24, 57, 192, 1) 50%,
-              rgba(255, 255, 255, 1) 100%
-            );
+        <div class="Rubik text-[12vw]" style="
             -webkit-background-clip: text;
-           color: transparent;
+            color: transparent;
+            -webkit-text-stroke: 4px white;
           ">MEDIA</div>
 
-        <div
-          class="py-2 px-4 text-white rounded-full Rubik text-[30px] bg-[#1005A3] inline-block"
-        >
-          Thinking differently for next future technology
-        </div>
+       
       </div>
     </div>
-    <div class="absolute top-10 right-[8vw] z-20">
-        <img src="assets/images/png/vrhuman.png" class="w-auto h-auto" alt="vr-human" />
-    </div>
-    <div class="absolute top-10 left-[-13rem] z-10">
-        <img src="assets/images/png/hologram.png" class="w-auto h-auto" alt="hologram" />
-    </div>
+    <!-- <div class="absolute bottom-[-15vh]  left-[-27vw] z-10">
+      <rocket />
+    </div> -->
+   
 
     <div class="absolute top-10 right-[-25rem] z-5">
         <img src="assets/images/png/red.png" class="w-auto h-auto" />
@@ -60,11 +50,16 @@
         playsinline
         class="w-screen h-screen object-cover"
       >
-        <source src="assets/video/star2.mp4" type="video/mp4" />
+        <source src="assets/video/rock.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
 </template>
+
+
+<script setup>
+import rocket from '~/components/Model/rocket.vue'
+</script>
 
 <style></style>
