@@ -14,6 +14,7 @@
             depth: 100,
             modifier: 3,
             slideShadows: true,
+            centeredSlides: true,
           }" 
           :navigation="{
         prevEl: '.slidePrev-btn',

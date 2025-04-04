@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-screen relative ">
+  <div class="w-screen h-screen relative ">
 
     <div class="absolute top-[-25vw] left-[-25vw] z-50">
         <img src="assets/images/png/blue.png" class="w-auto h-auto" />
@@ -10,7 +10,7 @@
     
     <!-- Spline เป็นพื้นหลัง -->
     <!-- <spline-viewer url="https://prod.spline.design/sJSltAQD0MtCown7/scene.splinecode"
-      class="spline-background z-1"></spline-viewer> -->
+      class="spline-background "></spline-viewer> -->
 
     <!-- ข้อความ -->
     <div class="absolute z-50 top-[10vh] flex justify-center w-full">
@@ -53,6 +53,19 @@
         JOIN US
       </button>
     </div>
+        
+    <div>
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-screen h-screen object-cover"
+      >
+        <source src="assets/video/vdo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
 </template>
 
@@ -83,7 +96,7 @@ onMounted(() => {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
+  z-index: 1;
 }
 
 *,

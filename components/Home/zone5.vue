@@ -18,13 +18,21 @@
   
 
 
-      <div  class ="w-full h-[100vh] bg-black">
-        
-          <!-- <img src="assets/images/png/bgzone5.png" /> -->
+     
+    <div>
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-screen h-screen object-cover"
+      >
+        <source src="assets/video/star.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-      </div>
-
-      <div class="absolute bottom-[-10dvh] z-20 left-1/2 transform -translate-x-1/2">
+      <div class="absolute bottom-[-5dvh] z-20 left-1/2 transform -translate-x-1/2">
         <img src="assets/images/png/vr-headset.png" class=" h-auto" alt="vrheadset" />
     </div>
     <div class="absolute bottom-[-3vh] z-30">
