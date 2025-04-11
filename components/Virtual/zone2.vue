@@ -18,7 +18,7 @@
         class="w-[70%] h-[70%] z-10 "
         @click="togglePlay"
       >
-        <source src="assets/video/vr.mp4" type="video/mp4" />
+        <source src="assets/video/Smart Museum.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="absolute top-5 right-[-5vw] z-20">

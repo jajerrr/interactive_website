@@ -1,0 +1,11 @@
+{
+  "name": "threejs-animation-scroll",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "three": "^0.132.2",
+    "vite": "^2.9.9"
+  }
+}
