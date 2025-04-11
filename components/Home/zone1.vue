@@ -5,30 +5,33 @@
       <HomeNavbar />
      </div>
       
-      <div class="absolute z-10 bottom-0 flex flex-col items-center justify-center w-full h-screen text-center">
+      <div class="absolute z-20 top-[18vh] flex  left-[10vw] flex-col   w-full h-screen">
         <div
-          class="Rubik text-[12vw]"
+          class="Rubik text-[10vw]"
           style="
             -webkit-background-clip: text;
             color: transparent;
-            -webkit-text-stroke: 4px white;
+            -webkit-text-stroke: 3px white;
           "
         >
           INTERACTIVE
         </div>
 
-        <div class="Rubik text-[12vw]" style="
-            -webkit-background-clip: text;
+        <div class="Rubik text-[10vw]" style="
+             -webkit-background-clip: text;
             color: transparent;
-            -webkit-text-stroke: 4px white;
+            -webkit-text-stroke: 3px white;
           ">MEDIA</div>
 
        
       </div>
+      <div class="absolute top-[5vw] left-[-15vw] z-5 blur-md rotate-[10deg]">
+        <img src="assets/images/png/5.png" class="w-screen h-auto" />
     </div>
-    <!-- <div class="absolute bottom-[-15vh]  left-[-27vw] z-10">
+    </div>
+    <div class="absolute bottom-[-10vh]  right-[-25vw] z-30">
       <rocket />
-    </div> -->
+    </div>
    
 
     <div class="absolute top-10 right-[-25rem] z-5">

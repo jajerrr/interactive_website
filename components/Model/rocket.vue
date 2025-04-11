@@ -20,7 +20,7 @@
   
     // ตั้งค่ากล้อง
     camera = new THREE.PerspectiveCamera(
-      40,  // มุมมอง (Field of view)
+      30,  // มุมมอง (Field of view)
       window.innerWidth / window.innerHeight,  // อัตราส่วนภาพตามขนาดของหน้าต่าง
       0.1,  // แผ่นตัดใกล้ (Near clipping plane)
       100  // แผ่นตัดไกล (Far clipping plane)

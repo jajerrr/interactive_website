@@ -70,3 +70,5 @@ assets/videos
 #git remote add origin https://github.com/jajerrr/pscm-portal-font.git
 #git push -u origin main
 >>>>>>> master
+assets/video/vr.mp4
+

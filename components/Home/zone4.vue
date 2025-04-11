@@ -1,17 +1,20 @@
 <template>
-  <div class="w-screen h-screen relative overflow-hidden">
-    <div class="w-screen h-screen bg-black flex items-center justify-center">
-      <video
-        ref="videoRef"
-        loop
-        playsinline
-        class="w-[70%] h-[80%]"
-        @click="togglePlay"
-      >
-        <source src="/assets/video/Smart Museum.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+  <div class="w-screen h-screen relative bg-black overflow-hidden flex justify-center items-center">
+ 
+    <video
+      ref="videoRef"
+      loop
+      playsinline
+      autoplay
+      class="w-[80%] h-[80%]"
+      @click="togglePlay"
+    >
+      <source src="assets/video/Smart Museum.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+   
+
+    
   </div>
 </template>
 
@@ -22,7 +25,6 @@ const videoRef = ref(null)
 
 const togglePlay = () => {
   if (!videoRef.value) return
-
   if (videoRef.value.paused) {
     videoRef.value.play()
   } else {
@@ -38,14 +40,12 @@ onMounted(() => {
   observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // เมื่อ scroll มาเจอ
         videoRef.value.play()
       } else {
-        // ถ้าเลื่อนออกไปนอกจอจะหยุด (หรือไม่หยุดก็ได้)
         videoRef.value.pause()
       }
     })
-  }, { threshold: 0.5 }) // กำหนดว่าเห็น 50% ถึงนับว่า "เจอ"
+  }, { threshold: 0.5 })
 
   observer.observe(videoRef.value)
 })

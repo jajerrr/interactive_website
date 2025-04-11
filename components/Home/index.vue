@@ -15,7 +15,7 @@
 
     <div >
       <div  >
-        <HomeZone3 />
+        <!-- <HomeZone3 /> -->
       </div>
 
 

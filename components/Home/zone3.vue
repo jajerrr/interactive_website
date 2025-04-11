@@ -14,10 +14,10 @@
      
       </div> 
     </div>
-        <!-- <div class="absolute z-1">
+        <div class="absolute z-1">
      <robot/>
     </div>
-   -->
+  
     
    
 

@@ -1,19 +1,25 @@
 <template>
-    <div class="w-screen relative  bg-black">
+    <div class="w-screen h-auto relative  bg-black overflow-hidden">
        
-  <!-- <div class="absolute top-[15vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-    <div class="Rubik text-[40px]"style="
+  <div class="w-screen justify-center absolute flex items-center  top-1 z-50">
+    <div class="Rubik text-[100px]"style="
             -webkit-background-clip: text;
             color: transparent;
-            -webkit-text-stroke: 2px white;
+            -webkit-text-stroke: 3px white;
           ">
       SHOW CASE
     </div>
     
     
-  </div> -->
+  </div>
+  <!-- <div class="w-full h-auto absolute z-10   overflow-hidden scrollContainer cursor-default">
+   <VirtualCardround />
+
+</div> -->
+
   <div class ="w-full absolute top-[50vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
     <HomeCardpanorama/>
+     
   </div>
   
 
@@ -44,6 +50,11 @@
     </div>
 
   </template>
+
+  <script>
+
+  import Card from "/components/Virtual/cardround.vue";
+</script>
   
   <style></style>
   

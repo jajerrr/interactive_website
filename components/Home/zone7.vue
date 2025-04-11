@@ -13,14 +13,14 @@
       class="spline-background "></spline-viewer> -->
 
     <!-- ข้อความ -->
-    <div class="absolute z-50 top-[10vh] flex justify-center w-full">
-      <div class="Rubik text-[70px] text-center" style="color: transparent; -webkit-text-stroke: 3px #29FF7F;">
+    <div class="absolute z-50 top-[5vh] flex justify-center w-full">
+      <div class="Rubik text-[50px] text-center" style="color: transparent; -webkit-text-stroke: 3px #29FF7F;">
         CLIENT WHO WORK WITH US
       </div>
     </div>
 
     <!-- ไอเท็มที่เลื่อน -->
-    <div class="absolute z-50 top-[20dvh] w-full space-y-[10vh]">
+    <div class="absolute z-50 top-[10dvh] w-full space-y-[10vh]">
       <div class="wrapper">
         <div v-for="(client, index) in clients" :key="index" :class="`item item${index + 1}`">
           <div class="flex justify-center w-full items-center space-x-4">
@@ -47,9 +47,9 @@
       </div>
     </div>
 
-    <div class="absolute z-50 bottom-10 flex justify-center w-full">
+    <div class="absolute z-50 bottom-5 flex justify-center w-full">
       <button
-        class="Rubik text-[30px] text-center border-4 border-[#29FF7F] bg-transparent rounded-full px-5 py-3 text-[#29FF7F]">
+        class="Rubik text-[20px] text-center border-4 border-[#29FF7F] bg-transparent rounded-full px-5 py-3 text-[#29FF7F]">
         JOIN US
       </button>
     </div>
