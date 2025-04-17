@@ -1,3 +1,5 @@
+
+
 <script >
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -8,8 +10,6 @@ export { THREE, GLTFLoader, gsap }
 export function initThree() {
   const camera = new THREE.PerspectiveCamera(10, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.z = 13;
-
-  
 
   const scene = new THREE.Scene();
   const renderer = new THREE.WebGLRenderer({ alpha: true });
@@ -40,6 +40,7 @@ export function initThree() {
   modelMove();
 });
 
+
   const reRender = () => {
     requestAnimationFrame(reRender);
     renderer.render(scene, camera);
@@ -48,8 +49,8 @@ export function initThree() {
   reRender();
 
   const arrPositionModel = [
-    { id: 'banner', position: {x: -1.3, y: -0.1, z: 0}, rotation: {x: 0, y: 1, z: 0} },
-    { id: "intro", position: { x: 1, y: -1, z: -5 }, rotation: { x: 0.8, y: -0.5, z: 0 } },
+    { id: 'banner', position: {x: 0, y: -1, z: 0}, rotation: {x: 0, y: 1.5, z: 0} },
+    { id: "intro", position: { x: 1, y: -1, z: -5 }, rotation: { x: 0.5, y: -0.5, z: 0 } },
     { id: "description", position: { x: -1, y: -1, z: -5 }, rotation: { x: 0, y: 0.5, z: 0 } },
     { id: "contact", position: { x: 0.8, y: -1, z: 0 }, rotation: { x: 0.3, y: -0.5, z: 0 } },
   ];
