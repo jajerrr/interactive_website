@@ -5,7 +5,7 @@
       <HomeNavbar />
      </div>
       
-      <div class="absolute z-20 top-[18vh] flex  left-[10vw] flex-col   w-full h-screen">
+      <div class="absolute z-20 top-[18vh] flex text-center  flex-col   w-full h-screen">
         <div
           class="Rubik text-[10vw]"
           style="
@@ -25,11 +25,11 @@
 
        
       </div>
-      <div class="absolute top-[5vw] left-[-15vw] z-5 blur-md rotate-[10deg]">
+      <!-- <div class="absolute top-[5vw] left-[-15vw] z-5 blur-md rotate-[10deg]">
         <img src="assets/images/png/5.png" class="w-screen h-auto" />
+    </div> -->
     </div>
-    </div>
-    <div class="absolute bottom-[-10vh]  right-[-25vw] z-30">
+    <div class="absolute bottom-[-10vh]  left-[-30vw] z-30">
       <rocket />
     </div>
    

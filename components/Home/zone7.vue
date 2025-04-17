@@ -54,7 +54,7 @@
       </button>
     </div>
         
-    <div>
+    <!-- <div>
       <video
         autoplay
         muted
@@ -65,7 +65,7 @@
         <source src="assets/video/vdo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-    </div>
+    </div> -->
   </div>
 </template>
 
