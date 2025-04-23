@@ -9,8 +9,8 @@
       :centeredSlides="true" 
       :slidesPerView="'auto'" 
       :coverflowEffect="{
-            rotate: 10,
-            stretch: 10,
+            rotate: 0,
+            stretch: 0,
             depth: 100,
             modifier: 3,
             slideShadows: true,
@@ -21,7 +21,7 @@
         nextEl: '.slideNext-btn'
       }" 
       :loop="false" 
-      :pagination="false"
+      :pagination="true"
        @slideChange="onSlideChange">
       <!-- สร้าง SwiperSlide สำหรับการ์ดแต่ละใบ -->
       <SwiperSlide
@@ -29,7 +29,7 @@
   :key="index"
   class="flex items-center justify-center"
   @click.stop="toggleClick(index)"
-  style="width: 50% !important;"
+  style="width: 30% !important;"
 >
   <div
     class="relative w-[90%] h-[450px] rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300"

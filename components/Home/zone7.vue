@@ -1,26 +1,14 @@
 <template>
-  <div class="w-screen h-screen relative ">
-
-    <div class="absolute top-[-25vw] left-[-25vw] z-50">
-        <img src="assets/images/png/blue.png" class="w-auto h-auto" />
-    </div>
-    <div class="absolute top-[10vw] right-[-25vw] z-50">
-        <img src="assets/images/png/blue.png" class="w-auto h-auto" />
-    </div>
-    
-    <!-- Spline เป็นพื้นหลัง -->
-    <!-- <spline-viewer url="https://prod.spline.design/sJSltAQD0MtCown7/scene.splinecode"
-      class="spline-background "></spline-viewer> -->
-
+  <div class="w-screen h-auto relative bg-transparent ">
     <!-- ข้อความ -->
-    <div class="absolute z-50 top-[5vh] flex justify-center w-full">
-      <div class="Rubik text-[50px] text-center" style="color: transparent; -webkit-text-stroke: 3px #29FF7F;">
+    <div class="flex justify-center  pt-[10rem]">
+      <div class="Rubik text-[50px] text-center" style="color: transparent; -webkit-text-stroke: 2px #29FF7F;">
         CLIENT WHO WORK WITH US
       </div>
     </div>
 
     <!-- ไอเท็มที่เลื่อน -->
-    <div class="absolute z-50 top-[10dvh] w-full space-y-[10vh]">
+    <div class="w-full space-y-[10vh]  pt-[5rem]">
       <div class="wrapper">
         <div v-for="(client, index) in clients" :key="index" :class="`item item${index + 1}`">
           <div class="flex justify-center w-full items-center space-x-4">
@@ -47,25 +35,12 @@
       </div>
     </div>
 
-    <div class="absolute z-50 bottom-5 flex justify-center w-full">
+    <div class="flex justify-center pt-[10rem]">
       <button
         class="Rubik text-[20px] text-center border-4 border-[#29FF7F] bg-transparent rounded-full px-5 py-3 text-[#29FF7F]">
         JOIN US
       </button>
     </div>
-        
-    <!-- <div>
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        class="w-screen h-screen object-cover"
-      >
-        <source src="assets/video/vdo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div> -->
   </div>
 </template>
 
@@ -90,14 +65,7 @@ onMounted(() => {
 
 <style scoped>
 /* Spline Viewer เป็นพื้นหลัง */
-.spline-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-}
+
 
 *,
 *::before,

@@ -1,64 +1,49 @@
 <template>
   <!-----------------------------------body-------------------------------------->
 
-  <div class="w-full h-auto bg-black relative   overflow-hidden scrollContainer cursor-default">
+  <div
+    class="w-full h-auto bg-black relative overflow-hidden scrollContainer cursor-default ScrollTrigger"
+  >
+    <div>
+      <HomeZone1 />
+    
+    </div>
+
 
     
+      <HomeZone2 />
+      <HomeZone3 />
+      <HomeZone4 />
+      <HomeZone5 />
+
+      <div class="bg-[url('assets/images/png/bgfoot.png')]">
+        <!-- <div class="absolute top-1 z-50">
+        <img src="assets/images/png/blackzone1.png" class="w-screen h-auto" />
+    </div> -->
+        <HomeZone7 />
+        <HomeZone8 />
+       <HomeFooter />
+      </div>
+      
+    
+
+   
    
 
-    <div >
-    <HomeZone1 />
-    </div>
-    <div>
-      <HomeZone2 />
-    </div>
-
-    <div >
-      <div  >
-        <!-- <HomeZone3 /> -->
-      </div>
-
-
-      <div  >
-        <HomeZone4 />
-      </div>
-
-
-      <div  >
-        <HomeZone5 />
-      </div>
-
-
-      
-      <div  >
-        <HomeZone7 />
-      </div>
-
-      <div  >
-        <HomeZone8 />
-      </div>
-
-      <div>
-        <HomeFooter />
-      </div>
-    </div>
-
     
 
-
-
+  
+     
+      
+   
   </div>
 </template>
 
 <script setup>
-import { HomeZone3 } from '#components';
-import rocket from '~/components/Model/rocket.vue'
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-
-// gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
-
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 </script>

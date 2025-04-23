@@ -1,14 +1,14 @@
 <template>
-  <div class="w-full h-auto mt-[10vh] mb-[20vh]">
+  <div class="w-full h-auto mt-[40vh] mb-[20vh]">
     <div class="w-full px-[10vw] space-y-8 ">
-      <h1 class="left-0 text-white text-[1vw]">News</h1>
+      <h1 class="left-0 text-white text-[20px]">News</h1>
       <div class="w-full h-[2px] my-4"
         style="background: linear-gradient(90deg, rgba(255,85,167,1) 0%, rgba(151,71,255,1) 100%);"></div>
       <div class="news-container">
         <NewsCard v-for="(news, index) in newsList" :key="index" :imageSrc="news.image" :title="news.title"
           :description="news.description" />
       </div>
-      <div class="flex items-center justify-center  pt-[10vw]">
+      <!-- <div class="flex items-center justify-center  pt-[10vw]">
         <div class="p-[3px] rounded-lg bg-transparent w-[80%]"
           style="background: linear-gradient(90deg, rgba(255,85,167,1) 0%, rgba(89,255,156,1) 100%);">
           <div class="flex  items-center justify-between px-[10vw] py-[10vh] bg-black rounded-lg">
@@ -17,7 +17,7 @@
               class="email-input px-3 py-2 rounded-full bg-white text-gray-500 border-none outline-none" />
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
    
   </div>
