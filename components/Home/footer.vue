@@ -1,6 +1,6 @@
 <template>
-    <footer
-      class="px-[5vw] bg-[#101151] p-[10rem] mt-[10vh] rounded-[100px] footer relative"
+    <footer 
+      class="px-[5vw] bg-[#13001C] p-[10rem] mt-[10vh] rounded-[100px] footer relative"
     >
       <!-- container -->
       <div class="flex flex-row">
@@ -75,7 +75,7 @@
     // GSAP ScrollTrigger animation
     gsap.fromTo(
       footer,
-      { y: "15%" }, // Start position (hidden below the screen)
+      { y: "5%" }, // Start position (hidden below the screen)
       {
         y: "0%", // End position (original position)
         duration: 1,
@@ -88,8 +88,8 @@
         markers: false, // Remove markers (useful for debugging)
         onEnter: () => footer.classList.add("slide-up"), // Add class when entering
         onLeave: () => footer.classList.remove("slide-up"), // Remove class when leaving
-        onEnterBack: () => footer.classList.add("slide-up"), // Add class when coming back into view
-        onLeaveBack: () => footer.classList.remove("slide-up"), // Remove class when leaving the viewport
+        // onEnterBack: () => footer.classList.add("slide-up"), // Add class when coming back into view
+        // onLeaveBack: () => footer.classList.remove("slide-up"), // Remove class when leaving the viewport
       },
       }
     );

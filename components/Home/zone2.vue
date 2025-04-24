@@ -1,8 +1,9 @@
 <template>
   <div class="w-full h-auto  relative p-[10rem]">
+    
    
     <!-- ส่วนของข้อความ -->
-    <div class="Inter text-white text-[8vw] mt-[10vh]">
+    <div id ="zone2-2"class="Inter text-white text-[8vw] mt-[10vh]">
       <div>Beyond Visions</div>
       <div class = "absolute left-[30vw]">Within Reach</div>
     </div>
@@ -13,11 +14,11 @@
     </div>
 
     <!-- เนื้อหาข้อความ -->
-    <div class="flex space-x-10 mt-[40vh] ">
-      <!-- Video container with GSAP ScrollTrigger -->
+    <div  class="flex space-x-10 mt-[40vh] ">
       <div class="video-container w-1/2">
         <video
           controls
+          muted
           id="video"
           ref="videoElement"
           class="w-full object-cover"
@@ -28,7 +29,7 @@
         </video>
       </div>
 
-      <div class="space-y-10 w-1/2">
+      <div id ="zone2-3" class="space-y-10 w-1/2">
         <div class="Inter text-white text-[1.5vw]">
           through advanced media to drive your business into the new era seamlessly. Our goal is to leave a lasting impression on customers and users by presenting information in a clear, visually engaging, and interactive way. We specialize in modern presentation technologies such as Augmented Reality, Virtual Reality, and 3D Animation.
         </div>
@@ -72,7 +73,7 @@ export default {
       },
       {
         scale: 2.5, // ขยายขนาดเมื่อเลื่อน
-        y: 800, // เลื่อนลงเมื่อเลื่อน
+        y: 900, // เลื่อนลงเมื่อเลื่อน
         x: "53%", // คงตำแหน่งไว้ที่กลาง
         scrollTrigger: {
           trigger: "#button", // เริ่มการ trigger เมื่อถึงปุ่ม about us

@@ -2,69 +2,75 @@
   <div >
   <div @click="resetClick" class="flex">
     <Swiper class="w-full h-[500px]"
-   
-      :modules="[SwiperEffectCoverflow, SwiperPagination, SwiperNavigation]" 
-      :effect="'coverflow'" 
-      :grabCursor="true"
-      :centeredSlides="true" 
-      :slidesPerView="'auto'" 
-      :coverflowEffect="{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 3,
-            slideShadows: true,
-            centeredSlides: true,
-          }" 
-          :navigation="{
-        prevEl: '.slidePrev-btn',
-        nextEl: '.slideNext-btn'
-      }" 
-      :loop="false" 
-      :pagination="true"
-       @slideChange="onSlideChange">
-      <!-- สร้าง SwiperSlide สำหรับการ์ดแต่ละใบ -->
-      <SwiperSlide
-  v-for="(card, index) in cards"
-  :key="index"
-  class="flex items-center justify-center"
-  @click.stop="toggleClick(index)"
-  style="width: 30% !important;"
->
-  <div
-    class="relative w-[90%] h-[450px] rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300"
-    :style="{ backgroundImage: `url(${card.backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
-  >
-    <!-- เงามืดเล็กน้อย -->
-    <div class="absolute inset-0 bg-black/30 z-0"></div>
+  :modules="[SwiperEffectCoverflow, SwiperPagination, SwiperNavigation]"
+  :effect="'coverflow'"
+  :grabCursor="true"
+  :centeredSlides="true"
+  :slidesPerView="'auto'"
+  :coverflowEffect="{
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 3,
+        slideShadows: true,
+        centeredSlides: true,
+      }"
+  :loop="false"
+  :pagination="true"
+  :navigation="{
+    prevEl: '.slidePrev-btn',
+    nextEl: '.slideNext-btn'
+  }"
+  @slideChange="onSlideChange">
+  <!-- สร้าง SwiperSlide สำหรับการ์ดแต่ละใบ -->
+  <SwiperSlide
+    v-for="(card, index) in cards"
+    :key="index"
+    class="flex items-center justify-center"
+    @click.stop="toggleClick(index)"
+    style="width: 30% !important;">
+    <div
+      class="relative w-[90%] h-[450px] rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300"
+      :style="{ backgroundImage: `url(${card.backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
+      <!-- เงามืดเล็กน้อย -->
+      <div class="absolute inset-0 bg-black/30 z-0"></div>
 
-    <!-- Overlay ข้อความ (70%) + แอนิเมชัน -->
-    <transition name="fade-slide">
-      <div
-        v-if="card.isClicked"
-        class="absolute bottom-0 left-0 w-full h-[70%] bg-black/80 backdrop-blur-md text-white z-10 p-5 flex flex-col justify-between rounded-t-2xl border-t border-white"
-      >
-        <div>
-          <h2 class="text-xl font-bold mb-2">{{ card.title }}</h2>
-          <p class="text-sm opacity-90 scrollable-text">{{ card.description }}</p>
+      <!-- Overlay ข้อความ (70%) + แอนิเมชัน -->
+      <transition name="fade-slide">
+        <div
+          v-if="card.isClicked"
+          class="absolute bottom-0 left-0 w-full h-[70%] bg-black/80 backdrop-blur-md text-white z-10 p-5 flex flex-col justify-between rounded-t-2xl border-t border-white">
+          <div>
+            <h2 class="text-xl font-bold mb-2">{{ card.title }}</h2>
+            <p class="text-sm opacity-90 scrollable-text">{{ card.description }}</p>
+          </div>
+          <button
+            class="mt-4 px-4 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition self-start"
+            @click.stop="onButtonClick(index)">
+            explore more
+          </button>
         </div>
-        <button
-          class="mt-4 px-4 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition self-start"
-          @click.stop="onButtonClick(index)"
-        >
-          explore more
-        </button>
-      </div>
-    </transition>
+      </transition>
+    </div>
+  </SwiperSlide>
+
+  <SwiperController />
+
+  <!-- ปุ่ม Prev -->
+  <div class="slide-arrow slide-arrow__prev slidePrev-btn ">
+    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
   </div>
-</SwiperSlide>
 
+  <!-- ปุ่ม Next -->
+  <div class="slide-arrow slide-arrow__next slideNext-btn">
+    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </div>
+</Swiper>
 
-
-      <SwiperController />
-
-
-    </Swiper>
   </div>
   </div>
 </template>
@@ -181,12 +187,14 @@ function resetClick() {
   padding: 56px 16px 16px 16px;
 }
 
+
+
 .slide-arrow {
   position: absolute;
   display: block;
   z-index: 10;
   top: 50%;
-  line-height: 1;
+  transform: translateY(-50%); /* ทำให้ปุ่มอยู่กึ่งกลางในแนวตั้ง */
   cursor: pointer;
 }
 
@@ -195,34 +203,34 @@ function resetClick() {
 }
 
 .slide-arrow__prev {
-  left: 0;
-  width: 50px;
-  height: 50px;
+  left: 32vw; /* ปรับระยะห่างจากขอบซ้าย */
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background-color: #d8d8d8;
-  border: 2px solid #d8d8d8;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
 }
 
 .slide-arrow__next {
-  right: 0;
-  width: 50px;
-  height: 50px;
+  right: 35vw; /* ปรับระยะห่างจากขอบขวา */
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background-color: #d8d8d8;
-  border: 2px solid #d8d8d8;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
 }
 
 .slide-arrow.swiper-button-disabled {
   display: none;
 }
+
+
 </style>

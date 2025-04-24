@@ -1,15 +1,20 @@
 <template>
-    <div class="w-screen h-[1200px] relative  bg-black object-cover">
+    <div class="w-screen h-screen relative  overflow-hidden flex flex-col items-center z-50    p-10">
+    
+
+   
+      
        
-  <div class="w-screen justify-center absolute flex items-center  top-1 z-50 p-[5rem]">
+  <div class="w-screen flex items-center justify-center  left-1/2 transform -translate-x-1/2 absolute   top-1 z-50 p-[5rem]">
     <div class ='flex flex-col items-center'>
-    <div class="Inter text-[30px] text-white">
+    <div class="Inter text-[35px] text-[#FF55A7] font-bold text-center">
+        
       SHOW CASE
     </div>
-    <div class="w-full h-[2px] my-4 bg-white px-[10vw]"></div>
+    <!-- <div class="w-full h-[4px] my-3 bg-[#FF55A7] px-[10vw] blur-sm"></div> -->
     </div>
    
-    <div class ="w-full absolute top-[60vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+    <div class ="w-full absolute top-[50vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
     <HomeCardpanorama/>
      
   </div>
@@ -17,15 +22,21 @@
     
   </div>
   <div >
-    <div class="absolute bottom-0 z-30 left-1/2 transform -translate-x-1/2">
-        <img src="assets/images/png/vr-headset.png" class=" h-auto" alt="vrheadset" />
+    <div class="absolute bottom-[-15vh]  left-1/2 transform -translate-x-1/2 z-30">
+        <img src="assets/images/png/vr-headset.png" class=" h-[50%]" alt="vrheadset" />
     </div>
-    <div class="absolute bottom-[-1vh] z-50">
-        <img src="assets/images/png/blackzone1.png" class="w-screen h-auto" />
+
+
+    <div class="absolute  z-1 w-screen flex items-center justify-center  left-1/2 transform -translate-x-1/2">
+        <img src="assets/images/png/Ellipse 49.png" class=" w-screen" alt="circle bg" />
     </div>
-    <div class="absolute bottom-[-5vh] z-1 flex items-center w-screen h-auto">
-        <img src="assets/images/png/Ellipse 49.png" class="w-screen h-auto" />
+
+    <div class="absolute  bottom-[-25vh]  left-1/2 transform -translate-x-1/2 z-50 w-screen">
+        <img src="assets/images/png/black.png" class=" w-screen" alt="black" />
     </div>
+  
+    
+    
     
 
   </div>
@@ -38,6 +49,20 @@
   </template>
 
   <script>
+  import { onMounted } from 'vue';
+  import { gsap } from 'gsap';
+  onMounted(() => {
+
+gsap.to('.video-bg', {
+  yPercent: 20,  // Adjust the parallax amount
+  ease: "none",
+  scrollTrigger: {
+    trigger: '.first-main-content',
+    start: 'top top',  // Start the effect when the section hits the top of the viewport
+    scrub: true        // Smooth scrolling effect
+  }
+})
+  });
 
   import Card from "/components/Virtual/cardround.vue";
 </script>

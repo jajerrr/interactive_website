@@ -1,0 +1,66 @@
+<template>
+    <div class="w-full h-[1200px] relative   object-cover overflow-hidden first-main-content">
+      <video autoplay muted loop playsinline class="video-bg-2">
+      <source src="assets/video/star.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    
+      
+       
+  <div class="w-screen justify-center absolute flex items-center  top-1 z-50 p-[5rem]">
+    <div class ='flex flex-col items-center'>
+    <div class="Inter text-[25px] text-white">
+      SHOW CASE
+    </div>
+    <!-- <div class="w-full h-[2px] my-4 bg-white px-[10vw]"></div> -->
+    </div>
+   
+    <div class ="w-full absolute top-[50vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+    <HomeCardpanorama/>
+     
+  </div>
+    
+    
+  </div>
+  <div >
+    <div class="absolute bottom-[-10vh]  left-1/2 transform -translate-x-1/2">
+        <img src="assets/images/png/vr-headset.png" class=" h-[50%]" alt="vrheadset" />
+    </div>
+    <!-- <div class="absolute bottom-[-1vh] z-50">
+        <img src="assets/images/png/blackzone1.png" class="w-screen h-auto" />
+    </div> -->
+    <!-- <div class="absolute bottom-[-20vw] z-0 flex items-center w-screen h-auto justify-center">
+        <img src="assets/images/png/Ellipse 49.png" class="w-[70%] h-auto" />
+    </div> -->
+    
+
+  </div>
+     
+   
+
+      
+    </div>
+
+  </template>
+
+  <script>
+  import { onMounted } from 'vue';
+  import { gsap } from 'gsap';
+  onMounted(() => {
+
+gsap.to('.video-bg-2', {
+  yPercent: 20,  // Adjust the parallax amount
+  ease: "none",
+  scrollTrigger: {
+    trigger: '.first-main-content',
+    start: 'top top',  // Start the effect when the section hits the top of the viewport
+    scrub: true        // Smooth scrolling effect
+  }
+})
+  });
+
+  import Card from "/components/Virtual/cardround.vue";
+</script>
+  
+  <style></style>
+  

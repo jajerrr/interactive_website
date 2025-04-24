@@ -1,7 +1,10 @@
 <template>
   <div class="w-screen h-auto relative bg-transparent ">
+    
+    
+   
     <!-- ข้อความ -->
-    <div class="flex justify-center  pt-[10rem]">
+    <div class="flex justify-center  pt-[30rem]">
       <div class="Rubik text-[50px] text-center" style="color: transparent; -webkit-text-stroke: 2px #29FF7F;">
         CLIENT WHO WORK WITH US
       </div>
