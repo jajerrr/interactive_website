@@ -334,7 +334,7 @@
     @apply Fredoka text-white font-semibold text-[10vw] ;
 }
 .z1-name-layout{
-    @apply ml-[10%] mt-[10%];
+    @apply ml-[10%] mt-[15%];
 }
 .img-women{
     @apply image-ab top-[18%] right-[5%] w-[23%];

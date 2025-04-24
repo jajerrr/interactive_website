@@ -7,7 +7,7 @@
        
   <div class="w-screen flex items-center justify-center  left-1/2 transform -translate-x-1/2 absolute   top-1 z-50 p-[5rem]">
     <div class ='flex flex-col items-center'>
-    <div class="Inter text-[35px] text-[#FF55A7] font-bold text-center">
+    <div class="Fredoka text-[3vw]  font-bold text-center text-[#FF55A7]">
         
       SHOW CASE
     </div>
@@ -22,8 +22,8 @@
     
   </div>
   <div >
-    <div class="absolute bottom-[-15vh]  left-1/2 transform -translate-x-1/2 z-30">
-        <img src="assets/images/png/vr-headset.png" class=" h-[50%]" alt="vrheadset" />
+    <div class="absolute bottom-0  left-1/2 transform -translate-x-1/2 z-30">
+        <img src="assets/zone1/8.png" class="  w-[100vw]" alt="vrheadset" />
     </div>
 
 
@@ -31,7 +31,7 @@
         <img src="assets/images/png/Ellipse 49.png" class=" w-screen" alt="circle bg" />
     </div>
 
-    <div class="absolute  bottom-[-25vh]  left-1/2 transform -translate-x-1/2 z-50 w-screen">
+    <div class="absolute  bottom-[-25vh]  left-1/2 transform -translate-x-1/2 z-1 w-screen">
         <img src="assets/images/png/black.png" class=" w-screen" alt="black" />
     </div>
   

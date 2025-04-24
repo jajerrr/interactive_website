@@ -17,7 +17,7 @@
   
   <style scoped>
   .news-card {
-    background: #221a6d65;
+    background: #221a6dbd;
     border-radius: 8px;
     padding: 16px;
     color: white;

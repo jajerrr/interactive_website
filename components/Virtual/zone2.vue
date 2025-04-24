@@ -1,5 +1,5 @@
 <template>
-    <div class="w-screen h-screen relative bg-black overflow-hidden flex justify-center items-center">
+    <div class="w-screen h-screen relative bg-black overflow-hidden flex justify-center items-center mt-[30vh]">
       <div class=" absolute  bottom-[-2vh] z-50">
     <div class="Rubik text-[80px]"style="
             -webkit-background-clip: text;
@@ -12,6 +12,7 @@
   </div>
       <video
         ref="videoRef"
+        muted
         loop
         playsinline
         autoplay

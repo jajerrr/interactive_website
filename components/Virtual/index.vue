@@ -1,15 +1,15 @@
 <template>
-<div class="w-full h-auto bg-black relative   overflow-hidden scrollContainer cursor-default">
+<div class="w-full h-auto relative overflow-hidden scrollContainer cursor-default ScrollTrigger bg-black">
+  
+  <div class=" top-0 left-0 w-full z-50 fixed">
+      <HomeNavbar />
+     </div>
   <VirtualZone1/>
+  <VirtualZone4/>
   <VirtualZone2/>
   <VirtualZone3/>
   <HomeFooter />
-  <!-- <img
-      ref="customCursor"
-      src="assets/svg/hand.svg"
-      class="fixed pointer-events-none z-50 w-[45%] h-auto transition-transform duration-100 ease-out opacity-70"
-      :style="{ top: `${y}px`, left: `${x}px`, transform: 'translate(-50%, -50%)' }"
-    /> -->
+
 
 
 </div>
@@ -20,22 +20,28 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
-const x = ref(0)
-const y = ref(0)
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-const updateMouse = (e) => {
-  x.value = e.clientX
-  y.value = e.clientY
-}
 
-onMounted(() => {
-  window.addEventListener('mousemove', updateMouse)
-})
+// const x = ref(0)
+// const y = ref(0)
 
-onBeforeUnmount(() => {
-  window.removeEventListener('mousemove', updateMouse)
-})
+// const updateMouse = (e) => {
+//   x.value = e.clientX
+//   y.value = e.clientY
+// }
+
+// onMounted(() => {
+//   window.addEventListener('mousemove', updateMouse)
+// })
+
+// onBeforeUnmount(() => {
+//   window.removeEventListener('mousemove', updateMouse)
+// })
 </script>
 
 <style>

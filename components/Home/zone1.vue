@@ -1,8 +1,7 @@
 <template>
   
   <div class="first-main-content sm" >
-    
-
+   
 
     <video autoplay muted loop playsinline class="video-bg">
       <source src="assets/video/rock.mp4" type="video/mp4" />
@@ -12,9 +11,13 @@
     <div class="z1-name-layout z1-name-layout-sm animate__animated animate__fadeInUp"  
     >
      
-      <h1  class=" Inter text-white font-bold text-[10vw]" >INTERACTIVE</h1>
+      <h1  class=" Rubik text-white font-bold text-[10vw]"style="
+             -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+          " >INTERACTIVE</h1>
       <div class="i-center mt-[-5vw] header2-sm ">
-        <h1   class=" Inter text-white font-bold text-[10vw]">MEDIA</h1>
+        <h1   class=" Rubik text-[#461051] font-bold text-[10vw]">MEDIA</h1>
       </div>
 
      
@@ -23,9 +26,9 @@
      
       
     </div>
-    <!-- <div class="absolute bottom-0  right-[-30vw] z-30">
+    <div class="absolute bottom-0  right-[-25vw] z-30">
       <rocket />
-    </div> -->
+    </div>
     <div class="absolute bottom-[-5vh] z-50">
         <img src="assets/svg/wave.svg" class="w-screen h-auto" />
     </div>
@@ -99,7 +102,28 @@ gsap.from("#zone2-2", {
   }
   }
 });
-
+gsap.from("#zone2-2-1", {
+  y: 100,
+  opacity: 0,
+  delay: 4,
+  scrollTrigger: {
+    trigger: "#zone2-2-1",
+    start: "top 70%",
+    end: "bottom 30%",
+    scrub: true,
+    toggleActions: "play reset play reset",
+  onEnter: () => {
+    const el = document.querySelector("#zone2-2-1");
+    el.classList.remove('animate__animated');
+    void el.offsetWidth; // บังคับให้รีเฟรชการ reflow เพื่อให้แอนิเมชันเริ่มใหม่
+    el.classList.add('animate__animated', 'animate__fadeInRight');
+  },
+  onLeaveBack: () => {
+    const el = document.querySelector("#zone2-2");
+    el.classList.remove('animate__animated', 'animate__fadeInRight');
+  }
+  }
+});
 gsap.from("#zone2-3", {
   y: 100,
   opacity: 0,
@@ -169,6 +193,31 @@ gsap.from("#zone4", {
   }
   }
 });
+
+
+gsap.from("#zone4-2", {
+  y: 100,
+  opacity: 0.5,
+  delay: 1,
+  scrollTrigger: {
+    trigger: "#zone4-2",
+    start: "top 90%",
+    end: "bottom 10%",
+    scrub: true,
+    toggleActions: "play none none reset",
+    onEnter: () => {
+    const el = document.querySelector("#zone4-2");
+    el.classList.remove('animate__animated');
+    void el.offsetWidth; // บังคับให้รีเฟรชการ reflow เพื่อให้แอนิเมชันเริ่มใหม่
+    el.classList.add('animate__animated', 'animate__fadeInUp');
+  },
+  onLeaveBack: () => {
+    const el = document.querySelector("#zone4-2");
+    el.classList.remove('animate__animated', 'animate__fadeInUp');
+  }
+  }
+});
+
 gsap.from("#zone5", {
   y: 100,
   opacity: 0,

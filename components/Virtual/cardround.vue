@@ -1,7 +1,7 @@
 <template>
     <div class="w-screen h-auto">
-        <div class="left-[5vw] absolute  bottom-2 z-50">
-    <div class="Rubik text-[100px]"style="
+        <div class="left-[5vw] absolute  bottom-[5vh] z-50">
+    <div class="Rubik text-[100px] "style="
             -webkit-background-clip: text;
             color: transparent;
             -webkit-text-stroke: 3px whitesmoke;
@@ -18,13 +18,13 @@
       VIRTUAL REALITY
     </div>
   </div>
-  <div class="absolute bottom-[2vh] right-3 z-50">
+  <!-- <div class="absolute bottom-[2vh] right-3 z-50">
   <div class="Inter text-[16px] text-white max-w-[50vw] sm:max-w-[500px] w-full break-words">
     Step into a world where imagination meets reality with our cutting-edge
     virtual reality solutions. Experience immersive environments that transport
     you beyond the ordinary, making every interaction unforgettable.
   </div>
-</div>
+</div> -->
 
   
       <div class="banner">

@@ -56,9 +56,10 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
     <!-----------------------------------navbar------------------------------------>
 
-    <div class="absolute top-0 left-0 w-full z-50">
+    <div class=" top-0 left-0 w-full z-50 fixed">
       <HomeNavbar />
-    </div>
+     </div>
+
 
     <!-----------------------------------first content ---------------------------->
 
@@ -85,7 +86,7 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
         <!-----------------------------------forth content ---------------------------->
 
-        <div id="zone4">
+        <div >
           <HomeZone4 />
         </div>
 

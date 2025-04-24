@@ -5,7 +5,7 @@
    
     <!-- ข้อความ -->
     <div class="flex justify-center  pt-[30rem]">
-      <div class="Rubik text-[50px] text-center" style="color: transparent; -webkit-text-stroke: 2px #29FF7F;">
+      <div class="Fredoka text-[3vw] font-bold text-center" style="color: #29FF7F;">
         CLIENT WHO WORK WITH US
       </div>
     </div>
@@ -39,8 +39,11 @@
     </div>
 
     <div class="flex justify-center pt-[10rem]">
+
+
+
       <button
-        class="Rubik text-[20px] text-center border-4 border-[#29FF7F] bg-transparent rounded-full px-5 py-3 text-[#29FF7F]">
+        class="font-bold text-[20px] text-center border-4 border-[#29FF7F] bg-transparent rounded-full px-5 py-3 text-[#29FF7F] hover:bg-[#29FF7F] hover:text-white transition self-start ">
         JOIN US
       </button>
     </div>

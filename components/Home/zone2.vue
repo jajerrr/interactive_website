@@ -3,18 +3,18 @@
     
    
     <!-- ส่วนของข้อความ -->
-    <div id ="zone2-2"class="Inter text-white text-[8vw] mt-[10vh]">
+    <div id ="zone2-2"class="Fredoka text-white text-[8vw] mt-[10vh]">
       <div>Beyond Visions</div>
       <div class = "absolute left-[30vw]">Within Reach</div>
     </div>
 
     <!-- ส่วนของภาพพื้นหลังที่มีการเลื่อน -->
-    <div class="right-[-15vw] absolute top-0 z-1">
-      <img src="assets/svg/cube.svg" alt="cube" />
+    <div  id ="zone2-2-1" class="right-[-15vw] absolute top-[-5vh] z-1">
+      <img src="assets/zone1/12.png" alt="cube" />
     </div>
 
     <!-- เนื้อหาข้อความ -->
-    <div  class="flex space-x-10 mt-[40vh] ">
+    <div  class="flex space-x-10 mt-[50vh] ">
       <div class="video-container w-1/2">
         <video
           controls
@@ -35,12 +35,13 @@
         </div>
         <div>
           <button
-            id="button"
-            class="text-[20px] Inter px-8 py-3 bg-white rounded-full mt-[5rem]"
+           
+            class="text-[20px] Inter px-8 py-3 bg-white rounded-full mt-[3rem]"
           >
             about us
           </button>
         </div>
+        <move id="move" class="mt-[50rem]">          </move>
       </div>
     </div>
     <div class="absolute top-[10vw] right-[-25vw] z-1">
@@ -76,7 +77,7 @@ export default {
         y: 900, // เลื่อนลงเมื่อเลื่อน
         x: "53%", // คงตำแหน่งไว้ที่กลาง
         scrollTrigger: {
-          trigger: "#button", // เริ่มการ trigger เมื่อถึงปุ่ม about us
+          trigger: "#move", // เริ่มการ trigger เมื่อถึงปุ่ม about us
           start: "top bottom", // เมื่อเริ่มเลื่อนถึงตำแหน่งของปุ่ม
           end: "bottom top", // เมื่อปุ่มถึงตำแหน่งด้านบนของหน้าจอ
           scrub: true, // ทำให้การเปลี่ยนแปลงสัมพันธ์กับการเลื่อน
@@ -119,4 +120,8 @@ export default {
   transition: transform 0.5s ease; /* เพิ่มการเปลี่ยนแปลงที่ราบรื่น */
   object-fit: cover; /* Ensure video fills the container */
 }
+
+button:hover {
+    background: linear-gradient(90deg, rgba(255, 85, 167, 1) 0%, rgba(93, 206, 255, 1) 50%);
+  }
 </style>

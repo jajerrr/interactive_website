@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-[90vh]">
+  <div class="w-screen h-[90vh] mb-[50vh]">
     
     
 

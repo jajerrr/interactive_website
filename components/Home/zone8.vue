@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-auto mt-[40vh] mb-[20vh]">
     <div class="w-full px-[10vw] space-y-8 ">
-      <h1 class="left-0 text-white  text-[30px]">News</h1>
+      <h1 class="left-0 text-white Rubik text-[30px]">News</h1>
       <div class="w-full h-[2px] my-4"
         style="background: linear-gradient(90deg, rgba(255,85,167,1) 0%, rgba(151,71,255,1) 100%);"></div>
       <div class="news-container">

@@ -37,20 +37,24 @@
 
       <!-- Overlay ข้อความ (70%) + แอนิเมชัน -->
       <transition name="fade-slide">
-        <div
-          v-if="card.isClicked"
-          class="absolute bottom-0 left-0 w-full h-[70%] bg-black/80 backdrop-blur-md text-white z-10 p-5 flex flex-col justify-between rounded-t-2xl border-t border-white">
-          <div>
-            <h2 class="text-xl font-bold mb-2">{{ card.title }}</h2>
-            <p class="text-sm opacity-90 scrollable-text">{{ card.description }}</p>
-          </div>
-          <button
-            class="mt-4 px-4 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition self-start"
-            @click.stop="onButtonClick(index)">
-            explore more
-          </button>
-        </div>
-      </transition>
+              <div
+                v-if="card.isClicked"
+                class="absolute bottom-0 left-0 w-full h-[100%] bg-black/80 backdrop-blur-md text-white z-10 p-10 flex flex-col justify-between rounded-t-2xl ">
+                <div>
+                  <h2 class="text-xl font-bold mb-2">{{ card.title }}</h2>
+                  <p class="text-sm opacity-90 scrollable-text">{{ card.description }}</p>
+                </div>
+                <div class="flex items-center w-full justify-center">
+                  <button
+                  class=" text-white mt-4 px-4 py-2 bg-tranparent border-white border text-black rounded-full  transition self-start "
+                  
+                  @click.stop="onButtonClick(index)">
+                  explore more
+                </button>
+                </div>
+                
+              </div>
+            </transition>
     </div>
   </SwiperSlide>
 
@@ -85,37 +89,37 @@
 // กำหนดข้อมูลของการ์ด
 const cards = reactive([
   {
-    title: "Products",
+    title: " INTERACTIVE WEBSITE APPLICATION",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
     backgroundImage: "/images/img/riize.jpg",
   },
   {
-    title: "Categories",
+    title: "VIRTUAL REALITY",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
     backgroundImage: "/images/img/riize.jpg",
   },
   {
-    title: "Services",
+    title: "E-LEARNING",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
     backgroundImage: "/images/img/riize.jpg",
   },
   {
-    title: "Products",
+    title: "3D MODEL AND ANIMATION",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
     backgroundImage: "/images/img/riize.jpg",
   },
   {
-    title: "Categories",
+    title: "ARGUMENTED REALITY",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
     backgroundImage: "/images/img/riize.jpg",
   },
   {
-    title: "Services",
+    title: "METAVERSE",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
     backgroundImage: "/images/img/riize.jpg",
@@ -126,36 +130,65 @@ const cards = reactive([
 const activeIndex = ref(0);
 let previousActiveIndex = 0; 
 
-// ฟังก์ชันเมื่อมีการเปลี่ยนสไลด์
-function onSlideChange(swiper) {
-  if (previousActiveIndex !== swiper.realIndex) {
-    cards[previousActiveIndex].isClicked = false;
-    previousActiveIndex = swiper.realIndex;
+ // ฟังก์ชันเมื่อมีการเปลี่ยนสไลด์
+ function onSlideChange(swiper) {
+    cards.forEach((card) => card.isClicked = false); // รีเซ็ตการเลือกการ์ดทุกครั้งที่มีการเปลี่ยนสไลด์
   }
-  activeIndex.value = swiper.realIndex; // อัปเดต index ที่ active
-}
 
-// ฟังก์ชัน toggle สำหรับการคลิกการ์ด
-function toggleClick(index) {
-  if (index === activeIndex.value) {
+  // ฟังก์ชัน toggle สำหรับการคลิกการ์ด
+  function toggleClick(index) {
+    cards.forEach((card, idx) => {
+      card.isClicked = idx === index ? !card.isClicked : false; // เลือกการ์ดนี้หรือปิดการแสดง
+    });
+  }
+
+  // ฟังก์ชันเมื่อคลิกปุ่มใน Card Description
+  function onButtonClick(index) {
+    alert(`You clicked on card: ${cards[index].title}`);
+  }
+
+  // ฟังก์ชันรีเซ็ตการเลือกการ์ด
+  function resetClick() {
     cards.forEach((card) => (card.isClicked = false));
-    cards[index].isClicked = true;
   }
-}
-
-// ฟังก์ชันเมื่อคลิกปุ่มใน Card Description
-function onButtonClick(index) {
-  alert(`You clicked on card: ${cards[index].title}`);
-}
-
-function resetClick() {
-  cards.forEach((card) => (card.isClicked = false));
-}
 </script>
 
 
 
 <style scoped>
+
+button:hover {
+    background: linear-gradient(90deg, rgba(255, 85, 167, 1) 0%, rgba(93, 206, 255, 1) 50%);
+  }
+
+/* Transition สำหรับ Overlay */
+.fade-slide-enter-active, .fade-slide-leave-active-to {
+  transition: transform 0.5s ease, opacity 0.5s ease-in-out;
+  /* เริ่มต้นให้มันอยู่นอกหน้าจอในแนวตั้ง */
+  opacity: 0;
+ 
+}
+
+
+
+.fade-slide-enter-active-to, .fade-slide-leave-active {
+  transition: transform 0.5s ease, opacity 0.5s ease-in-out;
+  
+  transform: translateY(100%);  
+  opacity: 1;
+ 
+}
+
+.fade-slide-enter, .fade-slide-leave-to /* .fade-slide-leave-active ใน Vue 2.x */ {
+  transform: translateY(100%); /* เริ่มต้นให้มันอยู่นอกหน้าจอในแนวตั้ง */
+  opacity: 0;
+}
+
+.fade-slide-enter-to, .fade-slide-leave {
+  transform: translateY(0); /* สไลด์ขึ้นจากด้านล่าง */
+  opacity: 1;
+}
+
 
 
 .scrollable-text {
