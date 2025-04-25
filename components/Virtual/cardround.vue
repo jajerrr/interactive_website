@@ -208,6 +208,7 @@
               rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
               translateZ(180px);
       }
+      
       .banner .content h1{
           font-size: 5em;
       }

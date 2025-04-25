@@ -1,132 +1,158 @@
 <template>
   <div
-    class="body w-full h-auto relative overflow-hidden scrollContainer cursor-default"
+    class="body w-full h-auto relative overflow-hidden scrollContainer cursor-default bg-[#0B1F04]"
   >
-    <div class="fixed z-50">
-      <Navbar />
-    </div>
-    <!-- <div class="fixed z-50 w-screen bottom-0">
-      <div class="absolute bottom-[-10vh] left-[-10vw] z-0">
-        <img src="assets/svg/grass.svg" class="w-[120vw]" alt="" />
-      </div>
-      <div class="absolute bottom-[-10vh] right-[-10vw] z-0">
-        <img src="assets/svg/grass.svg" class="w-[120vw]" alt="" />
-      </div>
-    </div> -->
+  <div class=" top-0 left-0 w-full z-50 fixed">
+      <HomeNavbar />
+     </div>
+
+   
 
     <div
       id="banner"
-      class="section bg-[url('assets/images/png/forest.png')] relative overflow-hidden w-full h-screen bg-cover bg-no-repeat bg-center"
+      class="section relative overflow-hidden w-full h-screen bg-cover bg-no-repeat bg-center"
     >
-      <div class="content-fit z-10 relative">
-        <div class="title" data-before="ANIMATIONS">3D MODEL AND</div>
+    <div>
+      <div class="content-fit z-20 absolute right-[-10vw] top-0">
+        <div class="title">3D MODEL AND</div>
+        <div class="title">ANIMATIONS</div>
       </div>
+      
+       <div class="absolute right-0 top-0 z-10">
+        <img src="assets/3d/3.svg" class="w-full" alt="" />
+      </div>
+    
+    </div>
+     
 
       <!-- รูปไม้ -->
       <div class="absolute left-0 bottom-[-20vh] z-0">
-        <img src="assets/images/png/wood.png" class="w-[45vw]" alt="" />
+        <img src="assets/3d/ging.svg" class="w-[45vw]" alt="" />
       </div>
 
       <!-- รูปหิน -->
-      <div class="absolute right-0 bottom-[-20vh] z-0">
-        <img src="assets/images/png/vacanorock.png" class="w-[35vw]" alt="" />
+      
+      <div class="absolute right-0 top-0 z-0">
+        <img src="assets/3d/1.svg" class="w-screen" alt="" />
       </div>
+      
 
-      <!-- หญ้า -->
-      <div class="absolute bottom-[-10vh] left-[-10vw] z-0">
-        <img src="assets/svg/grass.svg" class="w-[120vw]" alt="" />
-      </div>
-      <div class="absolute bottom-[-10vh] right-[-10vw] z-0">
-        <img src="assets/svg/grass.svg" class="w-[120vw]" alt="" />
-      </div>
+     
     </div>
 
     <div
       id="intro"
-      class="section bg-[url('assets/images/png/forest3.png')] relative w-full h-auto"
+      class="section  relative w-full h-auto"
     >
-      <div class="content-fit z-40">
-        <div class="number">01</div>
-        <div class="des">
-          <div class="title">3d animation design for website</div>
+      <div class="content-fit z-40" style="padding: 20vw;">
+        
+        <div class="des ml-[10vw]">
+          <div class="title">3d animation design for website or other</div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-            dolor sit amet.
+            through advanced media to drive your business into the new era seamlessly. Our goal is to leave a lasting impression on customers and users by presenting information in a clear, visually engaging, and interactive way. We specialize in modern presentation technologies such as Augmented Reality, Virtual Reality, and 3D Animation
           </p>
         </div>
       </div>
-      <div class="absolute left-[-5vw] bottom-[-5vh] z-0">
-        <img src="assets/images/png/purplemon.png" class="w-[45vw]" alt="" />
+      <div class="absolute right-[-5vw] top-[20vh] z-0">
+        <img src="assets/3d/Mask group-1.svg" class="w-[45vw]" alt="" />
       </div>
-      <div class="absolute right-[-20vw] bottom-[5vh] z-0">
-        <img src="assets/images/png/tree.png" class="w-[50vw]" alt="" />
-      </div>
-      <div class="absolute bottom-[-10vh] left-[-10vw] z-0">
-        <img src="assets/svg/grass.svg" class="w-[120vw]" alt="" />
-      </div>
-      <div class="absolute bottom-[-10vh] right-[-10vw] z-0">
-        <img src="assets/svg/grass.svg" class="w-[120vw]" alt="" />
-      </div>
+    
     </div>
 
     <div
       id="description"
-      class="section bg-[url('assets/images/png/forest2.png')] relative bg-cover bg-no-repeat bg-center w-full h-auto"
+      class="section  flex space-x-[10vw] items-center relative bg-cover bg-no-repeat bg-center w-full h-auto"
     >
+    <div class="z-0">
+        <img src="assets/3d/ging2.svg" class="w-[90vw]" alt="" />
+      </div>
+     
       <div class="content-fit z-40">
         <div class="number">02</div>
         <div class="des">
-          <div class="title">LUNDEV</div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-            dolor sit amet.
+            through advanced media to drive your business into the new era seamlessly. Our goal is to leave a lasting impression on customers and users by presenting information in a clear, visually engaging, and interactive way. We specialize in modern presentation technologies such as Augmented Reality, Virtual Reality, and 3D Animation
           </p>
         </div>
       </div>
-      <div class="absolute left-[-10vw] bottom-[-5vh] z-0">
-        <img src="assets/images/png/mashroom.png" class="w-[45vw]" alt="" />
-      </div>
-      <div class="absolute right-[25vw] bottom-[27vh] z-0">
-        <img src="assets/images/png/door.png" class="w-[20vw]" alt="" />
-      </div>
-      <div class="absolute bottom-[-10vh] left-[-10vw] z-0">
-        <img src="assets/svg/grass.svg" class="w-[120vw]" alt="" />
-      </div>
-      <div class="absolute bottom-[-10vh] right-[-10vw] z-0">
-        <img src="assets/svg/grass.svg" class="w-[120vw]" alt="" />
-      </div>
+      
     </div>
 
     <div
-      id="contact"
-      class="section bg-[url('assets/images/png/forest4.png')] relative bg-cover bg-no-repeat bg-center w-full h-auto"
-    >
-      >
-      <div class="content-fit">
-        <div class="number">03</div>
-        <div class="des">
-          <div class="title">CONTACT</div>
-          <table>
-            <tr>
-              <td>Email</td>
-              <td>test@gmail.com</td>
-            </tr>
-            <tr>
-              <td>Phone</td>
-              <td>+841.231.235</td>
-            </tr>
-            <tr>
-              <td>Website</td>
-              <td>lundevweb.com</td>
-            </tr>
-            <tr>
-              <td>Youtube</td>
-              <td>@lundeveloper</td>
-            </tr>
-          </table>
+  id="contact"
+  class="section relative bg-cover bg-no-repeat bg-center w-full h-auto"
+>
+  <!-- Footer: ปรับให้อยู่เหนือภาพและติดกับด้านล่าง -->
+   <div class = "flex justify-center items-center">
+
+ 
+  <footer class="absolute bottom-[5vh] text-black bg-transparent z-50   w-[80vw]  p-10">
+    <!-- <div class="w-[80vw] h-[2px] my-2 flex justify-center items-center bg-[#000000] px-[10vw] pb-10"></div> -->
+    <!-- container -->
+    <div class="flex flex-row " >
+      <div class="text-[50px] Inter w-1/2">
+        SUBSCRIBE TO <br />OUR NEWSLETTER
+      </div>
+      <div class="w-1/2">
+        <input
+          type="email"
+          placeholder="Enter Your Email"
+          class="email-input w-[100%] h-[50%] rounded-2xl bg-white text-gray-500 border-none outline-none"
+        />
+      </div>
+    </div>
+
+    <div class="mt-[5rem] md:flex md:justify-between text-[15px]">
+      <div class="flex flex-col md:flex-row md:justify-between  gap-[5vw]">
+        <div class="mb-4">
+          <ul>
+            <li class="mb-4">
+              <a href="https://flowbite.com/">INTERACTIVE MEDIA</a>
+            </li>
+            <li>
+              Payatai Plaza, 128/323-333 Floor 30 <br />
+              Phaya Thai Rd, Khwaeng Thung Phaya Thai, <br />
+              Khet Ratchathewi, Bangkok 10400
+            </li>
+          </ul>
+        </div>
+        <div class="mb-4 ml-[5vw]">
+          <ul>
+            <li class="mb-4">
+              <a href="https://flowbite.com/">CONTACT</a>
+            </li>
+            <li>E-mail : info@clicknext.com</li>
+            <li>Tel : 02-217-7900</li>
+            <li>Fax : 02-612-9783</li>
+          </ul>
+        </div>
+        <div class="mb-4 absolute right-[5vw]">
+          <ul>
+            <li class="mb-4">
+              <a href="https://flowbite.com/" class="">
+                Download on mobile for new experience
+              </a>
+            </li>
+            <li class="flex gap-5 ">
+              <img src="assets/svg/apple.svg" class="h-[2rem] mr-4" alt="Logo" />
+              <img src="assets/svg/google.svg" class="h-[2rem] mr-4" alt="Logo" />
+            </li>
+          </ul>
         </div>
       </div>
     </div>
+
+
+  </footer>
+  </div>
+  <!-- รูปภาพที่อยู่ด้านล่าง -->
+  <div class="z-10 absolute bottom-0 right-[-20vw]">
+    <img src="assets/3d/Clip path group2.svg" class="w-[70vw]" alt="" />
+  </div>
+  <div class="z-1">
+    <img src="assets/3d/Clip path group3.svg" class="w-screen" alt="" />
+  </div>
+</div>
 
     <div id="container3D"></div>
   </div>
@@ -150,7 +176,7 @@ onMounted(async () => {
 
 .body {
   /* margin: 0; */
-  background-color: #1b1b1b;
+  background-color: #0B1F04;
   color: #f0ffc1;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -184,16 +210,14 @@ onMounted(async () => {
   } */
 
 .content-fit {
-  width: min(1200px, 90vw);
-  margin: auto;
+  width: min(1200px, 100vw);
   min-height: 100vh;
-  position: relative;
-  padding-block: 10em;
+  margin-top:10vh ;
 }
 
 #banner .title {
   color: #f5ff3d;
-  font-size: 10em;
+  font-size: 3em;
   font-family: "devil breeze";
   font-weight: bold;
   position: relative;
@@ -206,7 +230,7 @@ onMounted(async () => {
   top: 0.5em;
   inset: 0.66em 0 0 0;
   z-index: -1;
-  color: #662375;
+  color: #f0ffc1;
 }
 
 .section .decorate {

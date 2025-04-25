@@ -83,58 +83,15 @@ gsap.from("#zone2-2", {
     const el = document.querySelector("#zone2-2");
     el.classList.remove('animate__animated');
     void el.offsetWidth; // บังคับให้รีเฟรชการ reflow เพื่อให้แอนิเมชันเริ่มใหม่
-    el.classList.add('animate__animated', 'animate__fadeInLeft');
+    el.classList.add('animate__animated', 'animate__fadeInUp');
   },
   onLeaveBack: () => {
     const el = document.querySelector("#zone2-2");
-    el.classList.remove('animate__animated', 'animate__fadeInLeft');
+    el.classList.remove('animate__animated', 'animate__fadeInUp');
   }
   }
 });
-gsap.from("#zone2-2-1", {
-  y: 100,
-  opacity: 0,
-  delay: 4,
-  scrollTrigger: {
-    trigger: "#zone2-2-1",
-    start: "top 70%",
-    end: "bottom 30%",
-    scrub: true,
-    toggleActions: "play reset play reset",
-  onEnter: () => {
-    const el = document.querySelector("#zone2-2-1");
-    el.classList.remove('animate__animated');
-    void el.offsetWidth; // บังคับให้รีเฟรชการ reflow เพื่อให้แอนิเมชันเริ่มใหม่
-    el.classList.add('animate__animated', 'animate__fadeInRight');
-  },
-  onLeaveBack: () => {
-    const el = document.querySelector("#zone2-2");
-    el.classList.remove('animate__animated', 'animate__fadeInRight');
-  }
-  }
-});
-gsap.from("#zone2-3", {
-  y: 100,
-  opacity: 0,
-  delay: 4,
-  scrollTrigger: {
-    trigger: "#zone2-3",
-    start: "top 60%",
-    end: "bottom 40%",
-    scrub: true,
-    toggleActions: "play reset play reset",
-  onEnter: () => {
-    const el = document.querySelector("#zone2-3");
-    el.classList.remove('animate__animated');
-    void el.offsetWidth; // บังคับให้รีเฟรชการ reflow เพื่อให้แอนิเมชันเริ่มใหม่
-    el.classList.add('animate__animated', 'animate__fadeInRight');
-  },
-  onLeaveBack: () => {
-    const el = document.querySelector("#zone2-3");
-    el.classList.remove('animate__animated', 'animate__fadeInRight');
-  }
-  }
-});
+
 
 gsap.from("#zone3", {
 y: 100,
@@ -273,24 +230,24 @@ gsap.from("#zone7", {
   }
   }
 });
-gsap.from("#zone8", {
+gsap.from("#footer", {
   y: 100,
   opacity: 0,
   delay: 0.5,
   scrollTrigger: {
-    trigger: "#zone8",
+    trigger: "#footer",
     start: "top 80%",
     end: "bottom 20%",
     scrub: true,
     toggleActions: "play reset play reset",
   onEnter: () => {
-    const el = document.querySelector("#zone8");
+    const el = document.querySelector("#footer");
     el.classList.remove('animate__animated');
     void el.offsetWidth; // บังคับให้รีเฟรชการ reflow เพื่อให้แอนิเมชันเริ่มใหม่
     el.classList.add('animate__animated', 'animate__fadeInUp');
   },
   onLeaveBack: () => {
-    const el = document.querySelector("#zone8");
+    const el = document.querySelector("#footer");
     el.classList.remove('animate__animated', 'animate__fadeInUp');
   }
   }

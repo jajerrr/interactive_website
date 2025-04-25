@@ -113,7 +113,7 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
           </div>
 
           <!----------------------------------footer content ---------------------------->
-          <div id="zone8">
+          <div id="footer">
             <HomeFooter />
           </div>
         </div>
