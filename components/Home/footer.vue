@@ -1,6 +1,6 @@
 <template>
     <footer 
-      class="px-[5vw] bg-[#301240] p-[10rem] mt-[10vh] rounded-[100px] footer relative"
+      class="px-[5vw] bg-[#301240] p-[10rem] mt-[10vh] rounded-[100px]  relative"
     >
       <!-- container -->
       <div class="flex flex-row">

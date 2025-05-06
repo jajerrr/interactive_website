@@ -26,9 +26,9 @@
      
       
     </div>
-    <div class="absolute bottom-0  right-[-25vw] z-30">
+    <!-- <div class="absolute bottom-0  right-[-25vw] z-30">
       <rocket />
-    </div>
+    </div> -->
     <div class="absolute bottom-[-5vh] z-50">
         <img src="assets/svg/wave.svg" class="w-screen h-auto" />
     </div>
