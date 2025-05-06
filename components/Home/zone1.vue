@@ -26,9 +26,9 @@
      
       
     </div>
-    <div class="absolute bottom-0  right-[-25vw] z-30">
+    <!-- <div class="absolute bottom-0  right-[-25vw] z-30">
       <rocket />
-    </div>
+    </div> -->
     <div class="absolute bottom-[-5vh] z-50">
         <img src="assets/svg/wave.svg" class="w-screen h-auto" />
     </div>
@@ -284,24 +284,24 @@ gsap.from("#zone7", {
   }
   }
 });
-gsap.from("#zone8", {
+gsap.from("#footer", {
   y: 100,
   opacity: 0,
   delay: 0.5,
   scrollTrigger: {
-    trigger: "#zone8",
+    trigger: "#footer",
     start: "top 80%",
     end: "bottom 20%",
     scrub: true,
     toggleActions: "play reset play reset",
   onEnter: () => {
-    const el = document.querySelector("#zone8");
+    const el = document.querySelector("#footer");
     el.classList.remove('animate__animated');
     void el.offsetWidth; // บังคับให้รีเฟรชการ reflow เพื่อให้แอนิเมชันเริ่มใหม่
     el.classList.add('animate__animated', 'animate__fadeInUp');
   },
   onLeaveBack: () => {
-    const el = document.querySelector("#zone8");
+    const el = document.querySelector("#footer");
     el.classList.remove('animate__animated', 'animate__fadeInUp');
   }
   }
