@@ -40,13 +40,13 @@
               <div
                 v-if="card.isClicked"
                 class="absolute bottom-0 left-0 w-full h-[100%] bg-black/80 backdrop-blur-md text-white z-10 p-10 flex flex-col justify-between rounded-t-2xl ">
-                <div>
+                <div class="space-y-10">
                   <h2 class="text-xl font-bold mb-2">{{ card.title }}</h2>
                   <p class="text-sm opacity-90 scrollable-text">{{ card.description }}</p>
                 </div>
                 <div class="flex items-center w-full justify-center">
                   <button
-                  class=" text-white mt-4 px-4 py-2 bg-tranparent border-white border text-black rounded-full  transition self-start "
+                  class=" text-white mt-4 px-4 py-2 bg-tranparent border-white border rounded-full  transition self-start "
                   
                   @click.stop="onButtonClick(index)">
                   explore more
@@ -80,6 +80,14 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+function onButtonClick(index) {
+  const path = cards[index].path;
+  router.push(path);
+}
+
 
 
 
@@ -92,43 +100,49 @@ const cards = reactive([
     title: " INTERACTIVE WEBSITE APPLICATION",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/riize.jpg",
+    backgroundImage: "/images/img/www.jpg",
+    path: "/"
   },
   {
     title: "VIRTUAL REALITY",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/riize.jpg",
+    backgroundImage: "/images/img/vrslide.jpg",
+    path: "/Virtual"
   },
   {
     title: "E-LEARNING",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/riize.jpg",
+    backgroundImage: "/images/img/eee.jpg",
+    path: "/e-learning"
   },
   {
     title: "3D MODEL AND ANIMATION",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/riize.jpg",
+    backgroundImage: "/images/img/3dslide.jpg",
+    path: "/3D"
   },
   {
     title: "ARGUMENTED REALITY",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/riize.jpg",
+    backgroundImage: "/images/img/arslide.jpg",
   },
   {
     title: "METAVERSE",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
-    backgroundImage: "/images/img/riize.jpg",
+    backgroundImage: "/images/img/mt.jpg",
   },
 ]);
 
 // เก็บ index ของสไลด์ที่ active
 const activeIndex = ref(0);
 let previousActiveIndex = 0; 
+
+
 
  // ฟังก์ชันเมื่อมีการเปลี่ยนสไลด์
  function onSlideChange(swiper) {
@@ -143,9 +157,11 @@ let previousActiveIndex = 0;
   }
 
   // ฟังก์ชันเมื่อคลิกปุ่มใน Card Description
-  function onButtonClick(index) {
-    alert(`You clicked on card: ${cards[index].title}`);
-  }
+  // function onButtonClick(index) {
+    
+  //   alert(`You clicked on card: ${cards[index].title}`);
+    
+  // }
 
   // ฟังก์ชันรีเซ็ตการเลือกการ์ด
   function resetClick() {

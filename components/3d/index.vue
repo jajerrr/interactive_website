@@ -13,14 +13,14 @@
       class="section relative overflow-hidden w-full h-screen bg-cover bg-no-repeat bg-center"
     >
     <div>
-      <div class="content-fit z-20 absolute right-[-10vw] top-0">
+      <div class="content-fit z-20 absolute right-[-10vw] top-[30vh]">
         <div class="title">3D MODEL AND</div>
         <div class="title">ANIMATIONS</div>
       </div>
-      
+<!--       
        <div class="absolute right-0 top-0 z-10">
         <img src="assets/3d/3.svg" class="w-full" alt="" />
-      </div>
+      </div> -->
     
     </div>
      
@@ -158,13 +158,13 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup >
 import { onMounted } from "vue";
 import Navbar from "/components/Home/navbar.vue";
 import Footer from "/components/Home/footer.vue";
 
 onMounted(async () => {
-  const { initThree } = await import("/components/3D/bee.vue");
+  const { initThree } = await import("/components/3d/bee.vue");
   initThree();
 });
 </script>
@@ -217,7 +217,7 @@ onMounted(async () => {
 
 #banner .title {
   color: #f5ff3d;
-  font-size: 3em;
+  font-size: 7em;
   font-family: "devil breeze";
   font-weight: bold;
   position: relative;

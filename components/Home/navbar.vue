@@ -14,7 +14,7 @@
              
             </li>
             <li>
-                <div class="flex py-2 px-3 text-white rounded-full   bg-white t cursor-pointer hover:bg-red-500  transition self-start">
+                <div class="flex py-2 px-3 text-white rounded-full   bg-white  cursor-pointer hover:bg-red-500  transition self-start">
                     <a href="#" class="text-black hover:text-white  Inter">MENU</a>
 
                 </div>            

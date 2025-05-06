@@ -3,7 +3,7 @@
     
    
     <!-- ส่วนของข้อความ -->
-    <div id ="zone2-2"class="Fredoka text-white text-[8vw] mt-[10vh]">
+    <div id ="zone2-2"class="Fredoka text-white text-[6vw] mt-[10vh]">
       <div>Beyond Visions</div>
       <div class = "absolute left-[30vw]">Within Reach</div>
     </div>
@@ -33,14 +33,14 @@
         <div class="Inter text-white text-[1.5vw]">
           through advanced media to drive your business into the new era seamlessly. Our goal is to leave a lasting impression on customers and users by presenting information in a clear, visually engaging, and interactive way. We specialize in modern presentation technologies such as Augmented Reality, Virtual Reality, and 3D Animation.
         </div>
-        <div>
+        <!-- <div>
           <button
            
-            class="text-[20px] Inter px-8 py-3 bg-white rounded-full mt-[3rem]"
+            class="text-[20px] Inter px-8 py-3 bg-white rounded-full mt-[3rem]  hover:bg-red-500  transition self-start"
           >
             about us
           </button>
-        </div>
+        </div> -->
         <move id="move" class="mt-[50rem]">          </move>
       </div>
     </div>
