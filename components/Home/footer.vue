@@ -64,6 +64,7 @@
   
   <script setup>
   import { gsap } from "gsap";
+  import { onMounted } from 'vue';
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   
   // Register the ScrollTrigger plugin
@@ -86,8 +87,8 @@
         end: "bottom top", // End when the bottom of the footer reaches the top of the viewport
         scrub: true, // Link animation to the scroll position
         markers: false, // Remove markers (useful for debugging)
-        onEnter: () => footer.classList.add("slide-up"), // Add class when entering
-        onLeave: () => footer.classList.remove("slide-up"), // Remove class when leaving
+        // onEnter: () => footer.classList.add("slide-up"), // Add class when entering
+        // onLeave: () => footer.classList.remove("slide-up"), // Remove class when leaving
         // onEnterBack: () => footer.classList.add("slide-up"), // Add class when coming back into view
         // onLeaveBack: () => footer.classList.remove("slide-up"), // Remove class when leaving the viewport
       },
