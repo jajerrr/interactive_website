@@ -19,23 +19,32 @@
             <div class="text-[18px] text-center   pt-10 p-10">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry            
             </div>
-            <div class="flex">
-                <div class="flex-row justify-center pt-10 w-1/2">
-                <img src="assets/elearn/image 170.png" alt="" class="rounded-xl">
-                <img src="assets/elearn/image 170.png" alt="" class="rounded-xl">
-                <img src="assets/elearn/image 170.png" alt="" class="rounded-xl">
-                <img src="assets/elearn/image 170.png" alt="" class="rounded-xl">
-            </div>
-
-            <div class="flex-row justify-center pt-10  w-1/2">
-                <img src="assets/elearn/image 170.png" alt="" class="rounded-xl">
-                <img src="assets/elearn/image 170.png" alt="" class="rounded-xl">
-                <img src="assets/elearn/image 170.png" alt="" class="rounded-xl">
-                <img src="assets/elearn/image 170.png" alt="" class="rounded-xl">
-            </div>
 
 
-            </div>
+            <div class="flex h-screen">
+  <!-- ฝั่งซ้าย: รูปภาพแนวตั้ง -->
+  <div class="flex flex-col justify-center items-center  w-1/4 pl-10 space-y-10">
+    <img src="assets/elearn/image 170.png" alt="" class="rounded-xl" />
+    <img src="assets/elearn/image 170.png" alt="" class="rounded-xl" />
+    <img src="assets/elearn/image 170.png" alt="" class="rounded-xl" />
+  </div>
+
+  <!-- ฝั่งขวา: วิดีโอ -->
+  <div class="flex-1 flex justify-center items-center px-5">
+    <video
+      ref="videoRef"
+      muted
+      loop
+      playsinline
+      controls
+      class="w-full h-[74%] object-cover rounded-xl"
+    >
+      <source src="assets/video/Smart Museum.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
             
         </div>
     
