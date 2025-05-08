@@ -11,10 +11,21 @@
        </div>
 
        <div class="z-20 relative">
+        <div id="zone1">
         <ELearningZone1/>
+        </div>
+        <div id="zone2">
         <ELearningZone2/>
+
+        </div>
+        <div id="zone3">
         <ELearningZone3/>
+
+        </div>
+        <div id="zone4">
         <ELearningZone4/>
+
+        </div>
        </div>
        <HomeFooter/>
   
