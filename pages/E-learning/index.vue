@@ -6,7 +6,7 @@
   
   <script setup>
   
-  import  ELearning  from "/components/E-learning/zone1.vue";
+  import  ELearning  from "/components/E-learning/index.vue";
   
   </script>
   

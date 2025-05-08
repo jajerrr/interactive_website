@@ -1,8 +1,11 @@
 <template>
     <footer 
-      class="px-[5vw] bg-[#301240] p-[10rem] mt-[10vh] rounded-[100px]  relative"
+      class="relative overflow-hidden "
     >
       <!-- container -->
+       <div  class="px-[5vw] bg-[#301240] p-[10rem]  rounded-[100px] ">
+
+
       <div class="flex flex-row">
         <div class="text-white text-[50px] Inter w-1/2">
           SUBSCRIBE TO <br />OUR NEWSLETTER
@@ -59,6 +62,8 @@
           </div>
         </div>
       </div>
+       </div>
+       
     </footer>
   </template>
   
