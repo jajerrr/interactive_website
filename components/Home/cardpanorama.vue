@@ -115,7 +115,7 @@ const cards = reactive([
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     isClicked: false,
     backgroundImage: "/images/img/eee.jpg",
-    path: "/e-learning"
+    path: "/E-learning"
   },
   {
     title: "3D MODEL AND ANIMATION",
